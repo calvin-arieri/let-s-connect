@@ -200,39 +200,6 @@ export default SignUp;
 
 
 
-// import React, { useRef } from "react";
-// // import Home from "./Home";
-
-// function SignUp() {
-//   const name = useRef("")
-//   const email = useRef("")
-//   const password = useRef("")
-
-
-//   const handleClick=()=>{
-//     console.log(name,email,password)
-//   }
-
-//   return (
-//     <div>
-//       <div className="container">
-//       <div className="input-space">
-//         <input placeholder="Name" type="text" ref={name} />
-//       </div>
-//       <div className="input-space">
-//         <input placeholder="Email" type="text" ref={email} />
-//       </div>
-//       <div className="input-space">
-//         <input placeholder="Password" type="password" ref={password} />
-//       </div>
-//       <button onClick={handleClick}>Sign Up</button>
-//       </div> 
-      
-//     </div>
-//   )
-// }
-
-// export default SignUp;
 
 
 
