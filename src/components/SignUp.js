@@ -1,12 +1,12 @@
 const SignUp = () => {
     const[userName, setUserName] = useState('')
-    // const[password, setPassword] = useState('')
+    const[password, setPassword] = useState('')
 
-    // const handleSubmit = () => {
-    //     e.preventDefault()
+    const handleSubmit = () => {
+        e.preventDefault()
 
-    //     console.log(userName, password);
-    // }
+        console.log(userName, password);
+    }
 
     return (
         <form className="signup" onSubmit={handleSubmit}>
