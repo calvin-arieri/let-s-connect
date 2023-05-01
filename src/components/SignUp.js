@@ -26,7 +26,7 @@ const SignUp = () => {
               value={password}
             />
 
-            {/* <button onSubmit={handleSubmit}></button> */}
+            <button onSubmit={handleSubmit}></button>
         </form>
     )
 };
