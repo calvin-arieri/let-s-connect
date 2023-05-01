@@ -66,6 +66,45 @@ function SignUp({ handleSignUp }) {
   const handleInterestChange = () => {
     setInterest(interestRef.current.value);
   };
+  
+  const postData = async (url = '', data = {}) => {
+  const response = await fetch(url, {
+    method: 'POST',
+    headers: {
+      'Content-Type': 'application/json'
+    },
+    body: JSON.stringify(data)
+  });
+  return response.json();
+};
+
+const myData = [
+  {
+    "fName": "calvin",
+    "lname": "Arieri",
+    "d.O.B": "02-05-2004",
+    "location": "Nairobi",
+    "interest": "Gaming",
+    "minAge": 18,
+    "maxAge": 25,
+    "photo": "",
+    "userName": "calvin_arieri",
+    "gender": "male",
+    "pGender": "female",
+    "type": "Long-term",
+    "email": "morebucalvin@gmail",
+    "password": "************",
+    "id": 1
+  }
+];
+
+postData('http://localhost:3000/profiles', myData)
+  .then(data => {
+    console.log(data); // JSON data returned from server
+  })
+  .catch(error => {
+    console.error(error);
+  });
 
  return (
     <div>
