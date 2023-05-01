@@ -1,5 +1,5 @@
-import { getValue } from "@testing-library/user-event/dist/utils";
 import React, { useState } from "react";
+import './postForm.css'
 
 function PostForm() {
     const [file_upload, setUpload] = useState("")
@@ -31,13 +31,15 @@ function PostForm() {
         .then((res) => res.json())
         .then((posts) => console.log(posts))
     }
-    
+
     return(
-        <form onSubmit={posting}>
-            <input type="file" onChange={getValue} required />
-            <input type="text" onChange={getValue2} required />
-            <input type="submit" />
-        </form>
+        <div className="card" style={{background:"pink"}}>
+            <form >
+                <input type="file" onChange={getValue} required /><br /><br />
+                <input type="text" onChange={getValue2} required /><br /><br />
+                <button onClick={posting}>Post</button>
+            </form>
+        </div>
     )
 }
 
