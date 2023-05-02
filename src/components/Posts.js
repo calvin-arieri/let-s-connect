@@ -18,6 +18,9 @@ function Post() {
             return(available_posts)
         }
     })
+    //patching to add comments
+    //get the patch
+    //update the patch to the server
 
     //console.log(available_posts)
     return(
