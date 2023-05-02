@@ -1,177 +1,178 @@
-import  { useRef } from "react";
-import  { useState } from "react";
+import { useState, useRef } from "react";
 
 function SignUp({ handleSignUp }) {
-  const [name, setName] = useState('');
-  const [email, setEmail] = useState('');
-  const [password, setPassword] = useState('');
-  const [photo, setPhoto] = useState('');
-  const [location, setLocation] = useState('');
-  const [dateOfBirth, setDateOfBirth] = useState('');
-  const [gender, setGender] = useState('');
-  const [interest, setInterest] = useState('');
-  
-
-  const nameRef = useRef('');
-  const emailRef = useRef('');
-  const passwordRef = useRef('');
-  const photoRef = useRef('');
-  const locationRef = useRef('');
-  const dateOfBirthRef = useRef('');
-  const genderRef = useRef('');
-  const interestRef = useRef('');
-
-  const handleClick = () => {
-    handleSignUp();
-    console.log(
-      name,
-      email,
-      password,
-      photo,
-      location,
-      dateOfBirth,
-      gender,
-      interest
-    );
-  };
-
-  const handleNameChange = () => {
-    setName(nameRef.current.value);
-  };
-
-  const handleEmailChange = () => {
-    setEmail(emailRef.current.value);
-  };
-
-  const handlePasswordChange = () => {
-    setPassword(passwordRef.current.value);
-  };
-
-  const handlePhotoChange = () => {
-    setPhoto(photoRef.current.value);
-  };
-
-  const handleLocationChange = () => {
-    setLocation(locationRef.current.value);
-  };
-
-  const handleDateOfBirthChange = () => {
-    setDateOfBirth(dateOfBirthRef.current.value);
-  };
-
-  const handleGenderChange = () => {
-    setGender(genderRef.current.value);
-  };
-
-  const handleInterestChange = () => {
-    setInterest(interestRef.current.value);
-  };
-  
-  const postData = async (url = '', data = {}) => {
-  const response = await fetch(url, {
-    method: 'POST',
-    headers: {
-      'Content-Type': 'application/json'
-    },
-    body: JSON.stringify(data)
+  const [formState, setFormState] = useState({
+    fname: "",
+    lname: "",
+    dateOfBirth: "",
+    location: "",
+    interest: "",
+    photo: "",
+    userName: "",
+    gender: "",
+    type: "",
+    email: "",
+    password: "",
   });
-  return response.json();
+
+  const interestRef = useRef();
+  const userNameRef = useRef();
+  const typeRef = useRef();
+
+  const handleChange = (event) => {
+    const { name, value } = event.target;
+    setFormState((prevState) => ({ ...prevState, [name]: value }));
+  };
+
+  const handleInterestChange = (event) => {
+    setFormState((prevState) => ({ ...prevState, interest: interestRef.current.value }));
+  };
+
+  const handleUserNameChange = (event) => {
+    setFormState((prevState) => ({ ...prevState, userName: userNameRef.current.value }));
+  };
+
+  const handleTypeChange = (event) => {
+    setFormState((prevState) => ({ ...prevState, type: typeRef.current.value }));
+  };
+
+  const handleSubmit = (event) => {
+  event.preventDefault();
+
+  // Check if user already exists
+  fetch("http://localhost:3000/profiles")
+    .then((response) => response.json())
+    .then((data) => {
+      const existingUser = data.profiles.find(
+        (profile) =>
+          profile.email === formState.email || profile.userName === formState.userName
+      );
+      if (existingUser) {
+        alert("The user's account already exists");
+        return;
+      }
+
+      // Add new profile
+      const newProfile = {
+        fName: formState.fname,
+        lname: formState.lname,
+        "d.O.B": formState.dateOfBirth,
+        location: formState.location,
+        interest: formState.interest,
+        photo: formState.photo,
+        userName: formState.userName,
+        gender: formState.gender,
+        type: formState.type,
+        email: formState.email,
+        password: formState.password,
+      };
+
+      fetch("http://localhost:3000/profiles", {
+        method: "POST",
+        headers: {
+          "Content-Type": "application/json",
+        },
+        body: JSON.stringify(newProfile),
+      })
+        .then((response) => response.json())
+        .then((data) => {
+          console.log(data); // JSON data returned from server
+        })
+        .catch((error) => {
+          console.error(error);
+        });
+    })
+    .catch((error) => {
+      console.error(error);
+    });
+};
+      const handleClick = (event) => {
+  event.preventDefault();
+  // Perform additional action here
 };
 
-const myData = [
-  {
-    "fName": "calvin",
-    "lname": "Arieri",
-    "d.O.B": "02-05-2004",
-    "location": "Nairobi",
-    "interest": "Gaming",
-    "minAge": 18,
-    "maxAge": 25,
-    "photo": "",
-    "userName": "calvin_arieri",
-    "gender": "male",
-    "pGender": "female",
-    "type": "Long-term",
-    "email": "morebucalvin@gmail",
-    "password": "************",
-    "id": 1
-  }
-];
-
-postData('http://localhost:3000/profiles', myData)
-  .then(data => {
-    console.log(data); // JSON data returned from server
-  })
-  .catch(error => {
-    console.error(error);
-  });
-
- return (
+  return (
     <div>
       <div className="container">
-            <h1>SIGN UP</h1>
+        <h1>SIGN UP</h1>
 
-        <div className="input-space">
-          <input
-            placeholder="First Name"
-            type="text"
-            ref={nameRef}
-            onChange={handleNameChange}
-          />
-        </div>
-        <div className="input-space">
-          <input
-            placeholder="Last Name"
-            type="text"
-            ref={nameRef}
-            onChange={handleNameChange}
-          />
-        </div>
-        <div className="input-space">
-          <input
-            placeholder="Email"
-            type="text"
-            ref={emailRef}
-            onChange={handleEmailChange}
-          />
-        </div>
-        <div className="input-space">
-          <input
-            placeholder="Password"
-            type="password"
-            ref={passwordRef}
-            onChange={handlePasswordChange}
-          />
-        </div>
-        <div className="input-space">
-          <input
-            placeholder="Photo"
-            type="text"
-            ref={photoRef}
-            onChange={handlePhotoChange}
-          />
-        </div>
-        <div className="input-space">
-          <input
-            placeholder="Location"
-            type="text"
-            ref={locationRef}
-            onChange={handleLocationChange}
-          />
-        </div>
-        <div className="input-space">
-          <input
-            placeholder="Date of Birth"
-            type="text"
-            ref={dateOfBirthRef}
-            onChange={handleDateOfBirthChange}
-          />
-        </div>
-        <div className="input-space">
-          <select ref={genderRef} onChange={handleGenderChange}>
-            <option value="">Choose Gender</option>
+        <form onSubmit={handleSubmit}>
+          <div className="input-space">
+            <input
+              placeholder="First Name"
+              type="text"
+              name="fname"
+              value={formState.fname}
+              onChange={handleChange}
+            />
+          </div>
+          <div className="input-space">
+            <input
+              placeholder="Last Name"
+              type="text"
+              name="lname"
+              value={formState.lname}
+              onChange={handleChange}
+            />
+          </div>
+          <div className="input-space">
+            <input
+              placeholder="Email"
+              type="text"
+              name="email"
+              value={formState.email}
+              onChange={handleChange}
+            />
+          </div>
+          <div className="input-space">
+            <input
+              placeholder="Password"
+              type="password"
+              name="password"
+              value={formState.password}
+              onChange={handleChange}
+            />
+          </div>
+          <div className="input-space">
+            <input
+              placeholder="Photo"
+              type="text"
+              name="photo"
+              value={formState.photo}
+              onChange={handleChange}
+            />
+          </div>
+          <div className="input-space">
+            <input
+              placeholder="Location"
+              type="text"
+              name="location"
+              value={formState.location}
+              onChange={handleChange}
+            />
+          </div>
+          <div className="input-space">
+            <input
+              placeholder="Date of Birth"
+              type="text"
+              name="dateOfBirth"
+              value={formState.dateOfBirth}
+              onChange={handleChange}
+            />
+          </div>
+          <div className="input-space">
+            <select name="gender" value={formState.gender} onChange={handleChange}>
+              <option value="">Choose Gender</option>
             <option value="male">Male</option>
             <option value="female">Female</option>
+          </select>
+        </div>
+          <div className="input-space">
+            <select name="  Prefgender" value={formState.Prefgender} onChange={handleChange}>
+              <option value="">Choose Gender Preference</option>
+            <option value="male">Male</option>
+            <option value="female">Female</option>
+              <option value="both">both</option>
           </select>
         </div>
         <div className="input-space">
@@ -182,7 +183,25 @@ postData('http://localhost:3000/profiles', myData)
             onChange={handleInterestChange}
           />
         </div>
+        <div className="input-space">
+          <input
+            placeholder="Username"
+            type="text"
+            ref={userNameRef}
+            onChange={handleUserNameChange}
+          />
+        </div>
+        <div className="input-space">
+          <input
+            placeholder="Type"
+            type="text"
+            ref={typeRef}
+            onChange={handleTypeChange}
+          />
+        </div>
+        
         <button onClick={handleClick}>Sign Up</button>
+        </form>
       </div>
     </div>
   );
