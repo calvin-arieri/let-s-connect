@@ -1,8 +1,4 @@
 import './App.css';
-import PostForm from './components/PostForm';
-//import HomePage from './components/HomePage';
-//import SignUp from './components/SignUp';
-import Post from './components/Posts';
 
 function App() {
 
@@ -13,10 +9,7 @@ function App() {
   
   return (
     <div className="App">
-      {/* <HomePage /> */}
-      <Post /> 
-      <PostForm />  
-   {/* <SignUp handleSignUp={handleSignUp}/> */}
+
     </div>
   );
 }
