@@ -1,11 +1,10 @@
 import "./App.css";
-import HomePage from "./components/HomePage";
 import UpdateProfile from "./components/UpdateProfile";
 
 function App() {
   return (
     <div className="App">
-      <HomePage />
+      {/* <HomePage /> */}
       <UpdateProfile />
     </div>
   );
