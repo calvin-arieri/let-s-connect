@@ -19,3 +19,4 @@ function PostHeader() {
         </div>
     )
 }
+export default PostHeader;

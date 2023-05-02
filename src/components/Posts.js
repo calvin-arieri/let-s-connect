@@ -10,10 +10,19 @@ function Post() {
         .then(posts => getPost(posts))
     }, [])
 
+    const filtered_output = available_posts.filter((post_filter) =>{
+        if(post_filter.userName === filter_value){
+            return(post_filter)
+        }
+        else if(post_filter.userName !== filter_value){
+            return(available_posts)
+        }
+    })
+
     //console.log(available_posts)
     return(
         <div id="post_container">
-            {available_posts.map((one_post) =>{
+            {filtered_output.map((one_post) =>{
                 const {media, userName, caption, dislike, likes, id ,comment} = one_post
                 return(
                     <div className="card" key={id}>
