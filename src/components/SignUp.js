@@ -190,53 +190,6 @@ postData('http://localhost:3000/profiles', myData)
 
 export default SignUp;
 
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
-
 // import React from "react";
 // import { useState } from "react";
 
