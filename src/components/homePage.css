@@ -1,0 +1,29 @@
+.entirePage {
+  background-color: rgb(206, 88, 128);
+  height: 100vh;
+  width: 100vw;
+}
+
+.signin {
+  height: 5%;
+  display: flex;
+  justify-content: end;
+}
+
+.details {
+  height: 50%;
+  display: flex;
+}
+
+.aboutSection {
+  width: 50%;
+}
+
+.images {
+  width: 50%;
+}
+
+img {
+  width: 80%;
+  height: 100%;
+}
