@@ -1,10 +1,12 @@
-import logo from './logo.svg';
-import './App.css';
+import "./App.css";
+import HomePage from "./components/HomePage";
+import UpdateProfile from "./components/UpdateProfile";
 
 function App() {
   return (
     <div className="App">
-
+      <HomePage />
+      <UpdateProfile />
     </div>
   );
 }
