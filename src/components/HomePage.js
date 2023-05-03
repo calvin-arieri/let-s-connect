@@ -1,3 +1,4 @@
+import "./homePage.css";
 function HomePage() {
   return (
     <div className="entirePage">
