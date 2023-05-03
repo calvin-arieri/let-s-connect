@@ -4,11 +4,13 @@ import './posts.css'
 
 function Post() {
     const [available_posts , getPost] = useState([])
+    const url =`https://lets-connect-bryn.onrender.com/posts`
     useEffect(() =>{
-        fetch(`https://lets-connect-bryn.onrender.com/posts`)
+        fetch(url)
         .then(r => r.json())
         .then(posts => getPost(posts))
     }, [])
+    const filter_value = "calvin_arieri"
 
     const filtered_output = available_posts.filter((post_filter) =>{
         if(post_filter.userName === filter_value){
@@ -35,12 +37,13 @@ function Post() {
                         <span>caption</span>
                         <br />
                         {caption}</p>
-                        <p><button>likes</button> <span>{likes}  comment </span><input type="text" /> <button>Dislike</button> <span>{dislike}</span></p>
+                        <p><button>likes</button> <span>{likes}  comment </span><input type="text" onChange={get_comment}/> <button>Dislike</button> <span>{dislike}</span></p>
                         <p><button>send</button></p>
                         <p>{comment.map((comment) =>{
                             return(
-                                <p key={comment}>
-                                {comment}
+                                <p key={comment.say}>
+                                <strong>{comment.name}</strong>:{"  "}
+                                {comment.say}
                                 </p>
                             )
                         })}</p>
