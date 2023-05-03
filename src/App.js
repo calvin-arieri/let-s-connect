@@ -1,9 +1,5 @@
-import "./App.css";
-import Suggestion from "./components/Suggestion";
-//import ProfilesDisplay from "./components/displayProfiles";
-
-
-
+import './App.css';
+import Create from './components/SignUp';
 
 function App() {
   //   function handleSignUp() {
@@ -11,11 +7,17 @@ function App() {
   //   console.log("User signed up successfully!");
   // }
 
-
-  return <div className="App">
-    {/* <ProfilesDisplay /> */}
-    <Suggestion maximum_age={30} minimum_age={18} location="NAIROBI" preferred_gender={"female"} interest={"PARTYING"} type_relationship={"long-term"}/>    
-  </div>;
+//   function handleSignUp() {
+//   // Add your sign-up logic here
+//   console.log("User signed up successfully!");
+// }
+  
+  return (
+    <div className="App">
+   <Create />
+   {/* <SignUp handleSignUp={handleSignUp}/> */}
+    </div>
+  );
 }
 
 export default App;

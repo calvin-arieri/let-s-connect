@@ -1,6 +1,6 @@
 import { useState, useRef } from "react";
 
-function SignUp({ handleSignUp }) {
+function SignUp({handleSignUp}) {
   const [formState, setFormState] = useState({
     fname: "",
     lname: "",
@@ -40,17 +40,17 @@ function SignUp({ handleSignUp }) {
   event.preventDefault();
 
   // Check if user already exists
-  fetch("http://localhost:3000/profiles")
+  fetch("https://lets-connect-bryn.onrender.com/profiles")
     .then((response) => response.json())
     .then((data) => {
-      const existingUser = data.profiles.find(
+      const existingUser = data.profiles.find (
         (profile) =>
           profile.email === formState.email || profile.userName === formState.userName
       );
       if (existingUser) {
         alert("The user's account already exists");
         return;
-      }
+      };
 
       // Add new profile
       const newProfile = {
@@ -67,7 +67,7 @@ function SignUp({ handleSignUp }) {
         password: formState.password,
       };
 
-      fetch("http://localhost:3000/profiles", {
+      fetch("https://lets-connect-bryn.onrender.com/profiles", {
         method: "POST",
         headers: {
           "Content-Type": "application/json",
@@ -86,10 +86,10 @@ function SignUp({ handleSignUp }) {
       console.error(error);
     });
 };
-      const handleClick = (event) => {
-  event.preventDefault();
-  // Perform additional action here
-};
+//       const handleClick = (event) => {
+//   event.preventDefault();
+//   // Perform additional action here
+// };
 
   return (
     <div>
@@ -191,6 +191,20 @@ function SignUp({ handleSignUp }) {
             onChange={handleUserNameChange}
           />
         </div>
+        <div>
+                  <label for="dob">Date of Birth:</label>
+  <input type="date" id="dob" name="dob" max="2005-05-02" min="1953-05-02" required />
+  
+
+
+  <label for="min_age">Minimum Age:</label>
+  <input type="number" id="min_age" name="min_age" min="18" max="70" required />
+  
+
+  <label for="max_age">Maximum Age:</label>
+  <input type="number" id="max_age" name="max_age" min="18" max="70" required />
+  
+        </div>
         <div className="input-space">
           <input
             placeholder="Type"
@@ -200,11 +214,16 @@ function SignUp({ handleSignUp }) {
           />
         </div>
         
-        <button onClick={handleClick}>Sign Up</button>
+        <button onClick={handleSubmit}>Sign Up</button>
         </form>
+
+
       </div>
+      
     </div>
+    
   );
+  
 }
 
 export default SignUp;
