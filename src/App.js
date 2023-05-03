@@ -1,4 +1,5 @@
 import "./App.css";
+import UpdateProfile from "./components/UpdateProfile";
 
 function App() {
   //   function handleSignUp() {
@@ -6,7 +7,13 @@ function App() {
   //   console.log("User signed up successfully!");
   // }
 
-  return <div className="App"></div>;
+  return (
+    <div className="App">
+      {/* <HomePage /> */}
+
+      <UpdateProfile />
+    </div>
+  );
 }
 
 export default App;
