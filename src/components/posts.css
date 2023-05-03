@@ -1,0 +1,13 @@
+.card{
+    box-shadow: 2px 2px 2px 2px gray;
+
+}
+.card:hover{
+    box-shadow: 4px 4px 4px 4px gray;
+}
+#caption{
+    border: solid gray;
+    text-align: left;
+    width: 70%;
+    margin-left: 15%;
+}
