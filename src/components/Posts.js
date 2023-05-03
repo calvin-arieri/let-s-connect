@@ -5,6 +5,8 @@ import './posts.css'
 function Post() {
     const [available_posts , getPost] = useState([])
     const [user_comment, updatedComment] = useState("")
+    const [increase_likes, update_likes] = useState(0)
+    const [decrease_likes, update_dislikes] = useState(0)
 
     const url =`https://lets-connect-bryn.onrender.com/posts`
     useEffect(() =>{
@@ -32,7 +34,7 @@ function Post() {
             say: user_comment
         }
 
-        const updated_Comment_patch =[...available_posts.comment, new_comment]
+        const updated_Comment_patch =[ new_comment]
 
         console.log(updated_Comment_patch)
     }
