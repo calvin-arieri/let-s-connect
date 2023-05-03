@@ -38,6 +38,12 @@ function Post() {
 
         console.log(updated_Comment_patch)
     }
+    function add_likes() {
+
+    }
+    function reduce_likes(){
+        
+    }
 
     //console.log(available_posts)
     return(
@@ -52,14 +58,14 @@ function Post() {
                         <span>caption</span>
                         <br />
                         {caption}</p>
-                        <p><button><img src={like} /></button> <span>{likes}  comment </span><input type="text" onChange={get_comment}/> <button><img src={dislike} /></button> <span>{dislike}</span></p>
+                        <p><button onClick={add_likes}><img src={like} /></button> <span>{likes}  comment </span><input type="text" onChange={get_comment}/> <button onClick={reduce_likes}><img src={dislike} /></button> <span>{dislike}</span></p>
                         <p><button onClick={handle_patchComment} id={id}>send</button></p>
                         <p>{comment.map((comment) =>{
                             return(
-                                <p key={comment.say}>
+                                <div key={comment.say}>
                                 <strong>{comment.name}</strong>:{"  "}
                                 {comment.say}
-                                </p>
+                                </div>
                             )
                         })}</p>
                     </div>
