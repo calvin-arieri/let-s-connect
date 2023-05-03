@@ -1,28 +1,21 @@
-import { useState } from 'react';
-import './App.css';
-// import Create from './components/SignUp';
-// import ProfilesData from './components/Suggestions';
-import SignUp from './components/SignUp';
-import ProfilesData from './components/Suggestions';
-// import FilterProfiles from "./FilterProfiles";
+import "./App.css";
+import Suggestion from "./components/Suggestion";
+//import ProfilesDisplay from "./components/displayProfiles";
+
+
+
 
 function App() {
-  // const[profiles, setProfiles] = useState([]);
-  // const[userName, setUserName] = useState([]);
-//   function handleSignUp() {
-//     const newProfile = profiles.filter(profile => profile.userName !== userName);
-// setProfiles(newProfile);
-//   // Add your sign-up logic here
-//   console.log("User signed up successfully!");
-// }
-  
-  return (
-    <div className="App">
+  //   function handleSignUp() {
+  //   // Add your sign-up logic here
+  //   console.log("User signed up successfully!");
+  // }
 
 
-   <SignUp />
-    </div>
-  );
+  return <div className="App">
+    {/* <ProfilesDisplay /> */}
+    <Suggestion maximum_age={30} minimum_age={18} location="NAIROBI" preferred_gender={"female"} interest={"PARTYING"} type_relationship={"long-term"}/>    
+  </div>;
 }
 
 export default App;

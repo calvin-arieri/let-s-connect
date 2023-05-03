@@ -2,6 +2,26 @@
 {
   "profiles": [
     {
+<<<<<<< HEAD
+      "fName": "calvin",
+      "lname": "Arieri",
+      "d.O.B": "02-05-2004",
+      "location": "Nairobi",
+      "interest": "Gaming",
+      "minAge": 18,
+      "maxAge": 25,
+      "photo": "",
+      "userName": "calvin_arieri",
+      "gender": "male",
+      "pGender": "female",
+      "type": "Long-term",
+      "email": "morebucalvin@gmail",
+      "password": "************",
+      "id": 1
+    }
+  ]
+}
+=======
       "fName": "Natasha",
       "lname": "Nderitu",
       "d.O.B": "02-05-2004",
@@ -367,62 +387,3 @@
     }
   ]
 }
-=======
-  {  
- "profiles" : [
-
-  {
-    "fName": "calvin",
-    "lname": "Arieri",
-    "d.O.B": "02-05-2004",
-    "location": "Nairobi",
-    "interest": "Gaming",
-    "minAge": 18,
-    "maxAge": 25,
-    "photo": "",
-    "userName": "calvin_arieri",
-    "gender": "male",
-    "pGender": "female",
-    "type": "Long-term",
-    "email": "morebucalvin@gmail",
-    "password": "************",
-    "id": 1
-  },
-  {
-    "fName": "Morgan",
-    "lname": "Jason",
-    "d.O.B": "20-04-2000",
-    "location": "Nyamira",
-    "interest": "Football",
-    "minAge": 20,
-    "maxAge": 40,
-    "photo": "",
-    "userName": "morgan_jason",
-    "gender": "male",
-    "pGender": "female",
-    "type": "Long-term",
-    "email": "420morganjason@gmail",
-    "password": "********",
-    "id": 2
-  },
-  {
-    "fName": "bethwel",
-    "lname": "Kipkorir",
-    "d.O.B": "13-06-2003",
-    "location": "Eldoret",
-    "interest": "Music",
-    "minAge": 18,
-    "maxAge": 25,
-    "photo": "",
-    "userName": "bethwel_kipkorir",
-    "gender": "male",
-    "pGender": "female",
-    "type": "Long-term",
-    "email": "bethwelk@gmail",
-    "password": "*********",
-    "id": 3
-  }
-      ]
-
-  }
->>>>>>> a57fbfe (created age limits)
