@@ -1,10 +1,10 @@
 import { useState, useRef } from "react";
 
-function SignUp({handleSignUp}) {
+function SignUp() {
   const [formState, setFormState] = useState({
     fname: "",
     lname: "",
-    dateOfBirth: "",
+    age: "",
     location: "",
     interest: "",
     photo: "",
@@ -15,9 +15,9 @@ function SignUp({handleSignUp}) {
     password: "",
   });
 
-  const interestRef = useRef();
+  // const interestRef = useRef();
   const userNameRef = useRef();
-  const typeRef = useRef();
+  // const typeRef = useRef();
 
   const handleChange = (event) => {
     const { name, value } = event.target;
@@ -25,7 +25,8 @@ function SignUp({handleSignUp}) {
   };
 
   const handleInterestChange = (event) => {
-    setFormState((prevState) => ({ ...prevState, interest: interestRef.current.value }));
+    const { interest, value } = event.target;
+    setFormState((prevState) => ({ ...prevState, [interest]: value }));
   };
 
   const handleUserNameChange = (event) => {
@@ -33,7 +34,8 @@ function SignUp({handleSignUp}) {
   };
 
   const handleTypeChange = (event) => {
-    setFormState((prevState) => ({ ...prevState, type: typeRef.current.value }));
+    const { type, value } = event.target;
+    setFormState((prevState) => ({ ...prevState, [type]: value }));
   };
 
   const handleSubmit = (event) => {
@@ -43,10 +45,11 @@ function SignUp({handleSignUp}) {
   fetch("https://lets-connect-bryn.onrender.com/profiles")
     .then((response) => response.json())
     .then((data) => {
+      console.log(data);
       const existingUser = data.profiles.find (
         (profile) =>
           profile.email === formState.email || profile.userName === formState.userName
-      );
+      ); 
       if (existingUser) {
         alert("The user's account already exists");
         return;
@@ -56,7 +59,7 @@ function SignUp({handleSignUp}) {
       const newProfile = {
         fName: formState.fname,
         lname: formState.lname,
-        "d.O.B": formState.dateOfBirth,
+        age: formState.age,
         location: formState.location,
         interest: formState.interest,
         photo: formState.photo,
@@ -96,7 +99,7 @@ function SignUp({handleSignUp}) {
       <div className="container">
         <h1>SIGN UP</h1>
 
-        <form onSubmit={handleSubmit}>
+        <form>
           <div className="input-space">
             <input
               placeholder="First Name"
@@ -124,7 +127,7 @@ function SignUp({handleSignUp}) {
               onChange={handleChange}
             />
           </div>
-          <div className="input-space">
+          <div className="input-space2">
             <input
               placeholder="Password"
               type="password"
@@ -143,45 +146,48 @@ function SignUp({handleSignUp}) {
             />
           </div>
           <div className="input-space">
+            <select name="location" value={formState.location} onChange={handleChange}>
+              <option value="">Select location;</option>
+            <option value="NAIROBI">NAIROBI</option>
+            <option value="KISUMU">KISUMU</option>
+            <option value="ELDORET">ELDORET</option>
+            <option value="MOMBASA">MOMBASA</option>
+          </select>
+        </div>
+          <div className="input-space">
             <input
-              placeholder="Location"
+              placeholder="Age"
               type="text"
-              name="location"
-              value={formState.location}
+              name="age"
+              value={formState.age}
               onChange={handleChange}
             />
           </div>
-          <div className="input-space">
-            <input
-              placeholder="Date of Birth"
-              type="text"
-              name="dateOfBirth"
-              value={formState.dateOfBirth}
-              onChange={handleChange}
-            />
-          </div>
-          <div className="input-space">
+          <div className="input-space1">
             <select name="gender" value={formState.gender} onChange={handleChange}>
-              <option value="">Choose Gender</option>
+              <option value="">Select Gender</option>
             <option value="male">Male</option>
             <option value="female">Female</option>
           </select>
         </div>
-          <div className="input-space">
-            <select name="  Prefgender" value={formState.Prefgender} onChange={handleChange}>
-              <option value="">Choose Gender Preference</option>
+          <div className="input-space1">
+            <select name="Prefgender" value={formState.Prefgender} onChange={handleChange}>
+              <option value="">Select Gender Preference</option>
             <option value="male">Male</option>
             <option value="female">Female</option>
-              <option value="both">both</option>
+              <option value="both">Both</option>
           </select>
         </div>
-        <div className="input-space">
-          <input
-            placeholder="Interest"
-            type="text"
-            ref={interestRef}
-            onChange={handleInterestChange}
-          />
+        <div className="input-space1">
+            <select name="Interest" value={formState.interest} onChange={handleInterestChange}>
+            <option value="" className="SELECT">Select Interest</option>
+            <option value="SPORTS">SPORTS</option>
+            <option value="COOKING">COOKING</option>
+            <option value="READING">READING</option>
+            <option value="MOVIES">MOVIES</option>
+            <option value="GAMING">GAMING</option>
+            <option value="PARTYING">PARTYING</option>
+          </select>
         </div>
         <div className="input-space">
           <input
@@ -191,30 +197,29 @@ function SignUp({handleSignUp}) {
             onChange={handleUserNameChange}
           />
         </div>
-        <div>
+        {/* <div>
                   <label for="dob">Date of Birth:</label>
   <input type="date" id="dob" name="dob" max="2005-05-02" min="1953-05-02" required />
   
-
-
+</div>
+<div>
   <label for="min_age">Minimum Age:</label>
   <input type="number" id="min_age" name="min_age" min="18" max="70" required />
-  
-
+  </div>
+<div>
   <label for="max_age">Maximum Age:</label>
   <input type="number" id="max_age" name="max_age" min="18" max="70" required />
-  
-        </div>
-        <div className="input-space">
-          <input
-            placeholder="Type"
-            type="text"
-            ref={typeRef}
-            onChange={handleTypeChange}
-          />
+  </div> */}
+        
+         <div className="input-space1">
+            <select name="Type" value={formState.type} onChange={handleTypeChange}>
+              <option value="">Choose relationship type:</option>
+            <option value="long-term">long-term</option>
+            <option value="short-term">short-term</option>
+          </select>
         </div>
         
-        <button onClick={handleSubmit}>Sign Up</button>
+        <button onClick={handleSubmit}><span>SignUp</span></button>
         </form>
 
 
@@ -236,6 +241,7 @@ export default SignUp;
 //     const[password, setPassword] = useState('')
 
 //     const handleSubmit = () => {
+  
 //         e.preventDefault()
 
 //         console.log(email, password);
