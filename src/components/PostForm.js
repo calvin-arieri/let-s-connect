@@ -35,7 +35,9 @@ function PostForm() {
     return(
         <div className="card" style={{background:"pink"}}>
             <form >
+                <label>Enter image link</label><br />
                 <input type="text" onChange={getValue} required /><br /><br />
+
                 <input type="text" onChange={getValue2} required /><br /><br />
                 <button onClick={posting}>Post</button>
             </form>

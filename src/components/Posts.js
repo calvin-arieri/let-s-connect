@@ -1,8 +1,6 @@
 import React, { useState } from "react";
 import { useEffect } from "react";
 import './posts.css'
-import like from "./download.jpeg"
-import dislike from "./dislike.jpeg"
 
 function Post() {
     const [available_posts , getPost] = useState([])
@@ -34,17 +32,10 @@ function Post() {
             say: user_comment
         }
 
-        const updated_Comment_patch =[...filtered_output.comment, new_comment]
+        const updated_Comment_patch =[...available_posts.comment, new_comment]
 
         console.log(updated_Comment_patch)
     }
-    function add_likes() {
-
-    }
-    function reduce_likes(){
-        
-    }
-
     //console.log(available_posts)
     return(
         <div id="post_container">
@@ -58,14 +49,14 @@ function Post() {
                         <span>caption</span>
                         <br />
                         {caption}</p>
-                        <p><button onClick={add_likes}><img src={like} /></button> <span>{likes}  comment </span><input type="text" onChange={get_comment}/> <button onClick={reduce_likes}><img src={dislike} /></button> <span>{dislike}</span></p>
-                        <p><button onClick={handle_patchComment} id={id}>send</button></p>
+                        <p><button>likes</button> <span>{likes}  comment </span><input type="text" onChange={get_comment}/> <button>Dislike</button> <span>{dislike}</span></p>
+                        <p><button onClick={handle_patchComment}>send</button></p>
                         <p>{comment.map((comment) =>{
                             return(
-                                <div key={comment.say}>
+                                <p key={comment.say}>
                                 <strong>{comment.name}</strong>:{"  "}
                                 {comment.say}
-                                </div>
+                                </p>
                             )
                         })}</p>
                     </div>

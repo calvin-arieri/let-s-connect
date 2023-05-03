@@ -1,4 +1,8 @@
 import "./App.css";
+import Suggestion from "./components/Suggestion";
+//import ProfilesDisplay from "./components/displayProfiles";
+
+
 
 
 function App() {
@@ -9,8 +13,8 @@ function App() {
 
 
   return <div className="App">
-    
-    
+    {/* <ProfilesDisplay /> */}
+    <Suggestion maximum_age={30} minimum_age={18} location="NAIROBI" preferred_gender={"female"} interest={"PARTYING"} type_relationship={"long-term"}/>    
   </div>;
 }
 

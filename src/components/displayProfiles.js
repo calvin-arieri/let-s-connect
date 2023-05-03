@@ -13,8 +13,8 @@ function ProfilesDisplay() {
   return (
     <div>
       <div className="top">
-      <img style={{ maxHeight: '100px', maxWidth: '100px' }} src="https://rb.gy/8oavh" />
-      <h1>LET'S CONNECT</h1>
+      <img style={{ maxHeight: '100px', maxWidth: '100px' }} src="https://rb.gy/8oavh" />{" "}
+      <h1>Here are the other profiles using the app</h1>
       </div>
       
       <div className="profileCard">
