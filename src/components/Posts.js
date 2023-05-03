@@ -1,9 +1,13 @@
 import React, { useState } from "react";
 import { useEffect } from "react";
 import './posts.css'
+import like from "./download.jpeg"
+import dislike from "./dislike.jpeg"
 
 function Post() {
     const [available_posts , getPost] = useState([])
+    const [user_comment, updatedComment] = useState("")
+
     const url =`https://lets-connect-bryn.onrender.com/posts`
     useEffect(() =>{
         fetch(url)
@@ -20,9 +24,20 @@ function Post() {
             return(available_posts)
         }
     })
-    //patching to add comments
-    //get the patch
-    //update the patch to the server
+    function get_comment(event) {
+        updatedComment(event.target.value)
+    }
+
+    function handle_patchComment(event) {
+        const new_comment={
+            name:"peter james",
+            say: user_comment
+        }
+
+        const updated_Comment_patch =[...filtered_output.comment, new_comment]
+
+        console.log(updated_Comment_patch)
+    }
 
     //console.log(available_posts)
     return(
@@ -37,8 +52,8 @@ function Post() {
                         <span>caption</span>
                         <br />
                         {caption}</p>
-                        <p><button>likes</button> <span>{likes}  comment </span><input type="text" onChange={get_comment}/> <button>Dislike</button> <span>{dislike}</span></p>
-                        <p><button>send</button></p>
+                        <p><button><img src={like} /></button> <span>{likes}  comment </span><input type="text" onChange={get_comment}/> <button><img src={dislike} /></button> <span>{dislike}</span></p>
+                        <p><button onClick={handle_patchComment} id={id}>send</button></p>
                         <p>{comment.map((comment) =>{
                             return(
                                 <p key={comment.say}>
