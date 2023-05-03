@@ -1,13 +1,7 @@
 import "./App.css";
-import UpdateProfile from "./components/UpdateProfile";
 
 function App() {
-  return (
-    <div className="App">
-      {/* <HomePage /> */}
-      <UpdateProfile />
-    </div>
-  );
+  return <div className="App"></div>;
 }
 
 export default App;
