@@ -1,19 +1,24 @@
 import React, { useState } from "react";
 import './postForm.css'
 
-function PostForm() {
+function PostForm({incoming_name, incoming_Id}) {
+
     const [file_upload, setUpload] = useState("")
     const [caption, setCaption] = useState("")
+
     function getValue(event){
         setUpload(event.target.value)
     }
+
     function getValue2(event){
         setCaption(event.target.value)        
     }
+
     function posting(event) {
         event.preventDefault()
         const postInfo= {
-            userName : "",            
+            id: incoming_Id,
+            userName : incoming_name,            
             caption : caption,
             media : file_upload,
             comment: [],
@@ -37,7 +42,7 @@ function PostForm() {
             <form >
                 <label>Enter image link</label><br />
                 <input type="text" onChange={getValue} required /><br /><br />
-
+                <label>Your caption</label>
                 <input type="text" onChange={getValue2} required /><br /><br />
                 <button onClick={posting}>Post</button>
             </form>
