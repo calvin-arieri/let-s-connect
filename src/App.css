@@ -1,114 +1,24 @@
-.App {
-  text-align: center;
-}
-
-
-.top{
-  display: inline-flex;
-}
-
-.top img{
-  border-radius: 15px;
-  padding-top: 1%;
-  float:left;
-}
-
-.profileCard {
-  display: flex;
-  flex-direction: column;
-  align-items: center;
-  background-color: #FF5A5F ;
-  
-}
-
-.card {
-  width: 50%;
-  border-radius: 15px;
-  max-height:50%;
-  margin: 14px;
-  box-shadow: 0 2px 4px 0 rgb(88, 63, 63);
-  word-wrap: break-word;
-  background-color:  #087E8B;
-  display: inline-flex;
-}
-
-.card-content{
-  
-  padding-left: 12%;
-  
-  color: aliceblue;
-}
-
-.container{
-  background-color: pink;
-  padding: 0%;
-  margin: auto;
-}
-
-/* .NAV1{
-  width: 50%;
-  height: 50px;
-  /* background-color: #117DA9; 
-  overflow: hidden;
-  background-color: #333;
-  position: relative;
-  display: inline-block;
-  padding: 18px 15px 20px 30px;
-  text-decoration: none;
-  color: White;
-  font-size: 42px
-}
-.NAV1.split {
-  float: right;
-  background-color: #04AA6D;
-  color: white;
-}
-
- */
-
  .NAV1 {
    display: flex;
-   justify-content: space-between;
-   align-items: center;
-   color: black;
-   font-size: 20px;
- }
-
- .NAV1 {
-   display: flex;
-   justify-content: space-between;
-   align-items: center;
+   align-items: right;
    background-color: pink;
+   align-items: right;
  }
 
  .NAV1 a {
    text-decoration: none;
-   font-size: 18px;
-   padding: 8px 12px;
+   font-size: 50px;  
    border: 2px solid transparent;
-   color: white;
+   color: rgb(63, 6, 6);
+   margin-right:4%;
+   
  }
 
  .NAV1 a:hover {
-   border-color: pink;
-   background-color: pink;
+   border-color: rgb(120, 8, 27);
+   background-color: rgb(176, 141, 147);
  }
+.NAV1 a.active{
+  background-color: #087E8B;
+}
 
- .NAV1 a:hover:not(:first-child)::before {
-   content: "|";
-   margin-right: 8px;
- }
-
- .NAV1 a:first-child {
-   border-right: none;
- }
-
- .NAV1 a:last-child {
-   border-left: none;
- }
-
- .entirePage {
-
-   background-image:"https: //images.unsplash.com/photo-1494403687614-8ca3e13f154f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzZ8fGxvdmV8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60";
-   background:b blue;
- }
