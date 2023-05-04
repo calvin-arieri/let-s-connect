@@ -10,6 +10,7 @@ import HomePage from "./components/HomePage";
 import Posts from "./components/Posts";
 import ProfilesDisplay from "./displayProfiles";
 import UpdateProfile from "./components/UpdateProfile";
+import Chat from "./components/Chat";
 
 
 function App() {
@@ -22,7 +23,9 @@ function App() {
         <Routes>
           <Route path='/' element={<FinalHomePage />} /> 
           <Route path='add_details' element={<SignUp />} />
+          {/* <Route path='add_details' element={<Chat />} /> */}
           <Route path='find_partner' element={<FindPartner />} >
+            
             <Route exact path='with_id/' element={<UpdateProfile />} />
             <Route path= 'no_id'  element={<ProfilesDisplay />} />
           </Route>  

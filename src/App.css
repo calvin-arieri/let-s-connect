@@ -45,6 +45,11 @@
   margin: auto;
 }
 
+.FORM1{
+  height: 1600px;
+  width: 100%;
+}
+
 input[type=text],
 select {
   width: 50%;
@@ -56,9 +61,6 @@ select {
   box-sizing: border-box;
 }
 
-.input-space{
-  color: blue;
-}
 
 input[type=submit] {
   width: 100%;
@@ -92,7 +94,7 @@ font-size: 20px;
    padding: 18px 30px;
    margin: 10px 0;
     display: inline-block;
-    border: 15px solid #ccc;
+    border: 5px solid #ccc;
     border-radius: 10px;
     box-sizing: border-box;
     font-size: 20px;
@@ -136,6 +138,18 @@ font-size: 20px;
   opacity: 1;
   right: 0;
 }
+.input-space{
+  width: 60%;
+  display: inline-block;
+  height: auto;
+
+}
+
+.input-space1{
+  width: 55%;
+  height: auto;
+  display: inline-block;
+}
 
 .input-space2{
   font-size: 40px;
@@ -171,6 +185,8 @@ h1{
    display: flex;
    justify-content: space-between;
    align-items: center;
+   color: black;
+   font-size: 20px;
  }
 
  .NAV1 {
