@@ -6,7 +6,7 @@ function NavBar() {
             <nav className="NAV1">
                 <NavLink to='/'>Home</NavLink>
                 <NavLink to='add_details'>Add your details</NavLink>
-                <NavLink to='find_patner'>Find A partner?</NavLink>
+                <NavLink to='find_partner'>Find A partner?</NavLink>
             </nav>
 
         </div>

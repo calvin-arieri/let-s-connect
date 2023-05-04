@@ -1,4 +1,5 @@
 import { useState, useRef } from "react";
+import "./SignUp.css"
 
 function SignUp() {
   const [formState, setFormState] = useState({
@@ -97,9 +98,9 @@ function SignUp() {
   return (
     <div>
       <div className="container">
-        <h1 color="black">SIGN UP</h1>
+        <h3>LET'S CONNECT SIGN UP FORM</h3>
 
-        <form>
+        <form className="FORM1">
           <div className="input-space">
             <input
               placeholder="First Name"
@@ -145,7 +146,7 @@ function SignUp() {
               onChange={handleChange}
             />
           </div>
-          <div className="input-space">
+          <div className="input-space1">
             <select name="location" value={formState.location} onChange={handleChange}>
               <option value="">Select location;</option>
             <option value="NAIROBI">NAIROBI</option>
@@ -179,7 +180,7 @@ function SignUp() {
           </select>
         </div>
         <div className="input-space1">
-            <select name="Interest" value={formState.interest} onChange={handleInterestChange}>
+            <select name="interest" value={formState.interest} onChange={handleChange}>
             <option value="" className="SELECT">Select Interest</option>
             <option value="SPORTS">SPORTS</option>
             <option value="COOKING">COOKING</option>
@@ -212,14 +213,19 @@ function SignUp() {
   </div> */}
         
          <div className="input-space1">
-            <select name="Type" value={formState.type} onChange={handleTypeChange}>
+            <select name="type" value={formState.type} onChange={handleChange}>
               <option value="">Choose relationship type:</option>
             <option value="long-term">long-term</option>
             <option value="short-term">short-term</option>
           </select>
         </div>
         
-        <button onClick={handleSubmit}><span>SignUp</span></button>
+        {/* <button onClick={handleSubmit}><span>SignUp</span></button> */}
+         <button className="button1" onClick={handleSubmit}>
+      <span>Sign Up</span>
+      <span className="button__border"></span>
+      <span className="button__background"></span>
+    </button>
         </form>
 
 

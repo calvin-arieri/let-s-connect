@@ -51,44 +51,17 @@
 
 Page styles
 .entirePage {
-  background-image: url('https://images.unsplash.com/photo-1494403687614-8ca3e13f154f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzZ8fGxvdmV8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60');
+  background-image: url('https://plus.unsplash.com/premium_photo-1681398750730-ef82e310a86f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=1267&q=80');
   background-size: cover;
-  background-position: center;
   position: relative;
 }
 
-Background opacity transition
-.entirePage::before {
-  content: "";
-  position: absolute;
-  top: 0;
-  left: 0;
-  width: 100%;
-  opacity: 1;
-  transition: opacity 0.5s ease-in-out;
-  height: 100%;
-  color: #000;
-}
-
-Reduce background opacity on hover
-.entirePage:hover::before {
-  opacity: 0.8;
-}
-
-Sign in section
-.signin {
-  height: 5%;
-  display: flex;
-  justify-content: end;
-}
 
 Main content section
 .details {
   height: 40%;
   display: flex;
   color: rgb(89, 7, 7);
-  position: relative;
-  z-index: 1;
 }
 
 Image section
@@ -96,10 +69,8 @@ Image section
   position: absolute;
   top: 0;
   left: 0;
-  width: 100%;
-  height: 100%;
-  opacity: 1;
-  transition: opacity 0.5s ease-in-out;
+  width: 50%;
+  height: 50%;
 }
 
 Reduce image opacity on hover
@@ -109,9 +80,7 @@ Reduce image opacity on hover
 
 About section
 .aboutSection {
-  padding: 50px;
   color: wheat;
-  z-index: 1;
 }
 
 Image styles
@@ -128,13 +97,3 @@ Article section
   color: rgb(89, 7, 7);
 }
 
-Heading styles
-h1 {
-  color: wheat;
-  font-size: 20px;
-}
-
-h2 {
-  color: wheat;
-  font-size: 20px;
-} */
