@@ -41,7 +41,7 @@ function UpdateProfile({firstName, lastName, id ,picture}) {
   }
 
   return (
-    <div className="updateProfile" id="update_profile">
+    <div className="updateProfile1" id="update_profile">
       <div className="updatePhoto">
         <img src={picture} className="avatar img-circle" alt={firstName} />
         <h1>{firstName}</h1>

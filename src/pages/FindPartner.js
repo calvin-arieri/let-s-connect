@@ -28,13 +28,56 @@ function FindPartner() {
     return(
         <div>
             <div className="user">
-                <nav>
-                    <label>Enter user Name</label>
-                    <input type="text" onChange={(event)=>{setSearch_userName(event.target.value)}}/>
-                    <button onClick={receive_userName}>submit username</button>
-                    <a href="#suggestion">Suggestion</a>
-                    <a href="#other_profiles">Other profiles</a>                   
-                    <a href="#update_profile">Change preference</a>
+                <nav style={{backgroundColor:"#fa586a", height:"35px"}}>
+                    <label style={{
+              textDecoration: "none",
+              color: "black",
+              fontWeight: "bold",
+              fontSize: "larger",
+              transition: "color 0.3s ease",
+            }}
+            onMouseOver={(e) => (e.target.style.color = "black")}
+            onMouseOut={(e) => (e.target.style.color = "white")}>Enter user Name</label>
+                    <input type="text" onChange={(event)=>{setSearch_userName(event.target.value)}} style={{border:"none"}}/>
+                    <button onClick={receive_userName} style={{
+              textDecoration: "none",
+              color: "white",
+              fontWeight: "bold",
+              fontSize: "larger",
+              transition: "color 0.3s ease",
+              backgroundColor: "transparent",
+              border:"transparent",
+              marginRight:"70px",
+            }}
+            onMouseOver={(e) => (e.target.style.color = "black")}
+            onMouseOut={(e) => (e.target.style.color = "white")}>submit username</button>
+                    <a style={{
+              textDecoration: "none",
+              color: "white",
+              fontWeight: "bold",
+              fontSize: "larger",
+              transition: "color 0.3s ease",
+            }}
+            onMouseOver={(e) => (e.target.style.color = "black")}
+            onMouseOut={(e) => (e.target.style.color = "white")}href="#suggestion">Suggestion</a>{"   "}
+                    <a style={{
+              textDecoration: "none",
+              color: "white",
+              fontWeight: "bold",
+              fontSize: "larger",
+              transition: "color 0.3s ease",
+            }}
+            onMouseOver={(e) => (e.target.style.color = "black")}
+            onMouseOut={(e) => (e.target.style.color = "white")}href="#other_profiles">Other profiles</a>                   
+                    <a style={{
+              textDecoration: "none",
+              color: "white",
+              fontWeight: "bold",
+              fontSize: "larger",
+              transition: "color 0.3s ease",
+            }}
+            onMouseOver={(e) => (e.target.style.color = "black")}
+            onMouseOut={(e) => (e.target.style.color = "white")}href="#update_profile">Change preference</a>
                     
                 </nav>
             </div>
