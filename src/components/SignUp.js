@@ -97,7 +97,7 @@ function SignUp() {
   return (
     <div>
       <div className="container">
-        <h1>SIGN UP</h1>
+        <h1 color="black">SIGN UP</h1>
 
         <form>
           <div className="input-space">

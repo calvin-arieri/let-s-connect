@@ -1,5 +1,8 @@
 import { NavLink } from "react-router-dom";
 import "./homePage.css";
+import React from "react";
+
+
 function HomePage() {
   return (
     <div className="entirePage">
@@ -16,7 +19,9 @@ function HomePage() {
         </div>
         <div className="images">
           <img
-            src="https://images.unsplash.com/photo-1620459879599-e69e6300402e?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxwaG90by1wYWdlfHx8fGVufDB8fHx8&auto=format&fit=crop&w=687&q=80"
+            src="https://images.unsplash.com/photo-1494403687614-8ca3e13f154f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzZ8fGxvdmV8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
+
+
             alt=""
           />
         </div>

@@ -1,8 +1,6 @@
-<<<<<<< HEAD
 {
   "profiles": [
     {
-<<<<<<< HEAD
       "fName": "calvin",
       "lname": "Arieri",
       "d.O.B": "02-05-2004",
@@ -18,10 +16,8 @@
       "email": "morebucalvin@gmail",
       "password": "************",
       "id": 1
-    }
-  ]
-}
-=======
+    },
+   { 
       "fName": "Natasha",
       "lname": "Nderitu",
       "d.O.B": "02-05-2004",

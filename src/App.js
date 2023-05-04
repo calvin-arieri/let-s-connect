@@ -4,6 +4,10 @@ import NavBar from "./pages/NavBar";
 import FinalHomePage from "./pages/FinalHomePage";
 import SignUp from "./components/SignUp";
 import FindPartner from "./pages/FindPartner";
+// import SignUp  from "./components/SignUp";
+// import FilterProfile from "./components/FilterProfiles";
+import HomePage from "./components/HomePage";
+import Posts from "./components/Posts";
 import ProfilesDisplay from "./displayProfiles";
 import UpdateProfile from "./components/UpdateProfile";
 
