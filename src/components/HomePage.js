@@ -1,4 +1,3 @@
-import { NavLink } from "react-router-dom";
 import "./homePage.css";
 import ImageSlider from "./slideshow";
 
@@ -21,26 +20,26 @@ function HomePage() {
   ];
   const containerStyles = {
     width: "500px",
-    height: "280px",
+    height: "700px",
     margin: "0 auto",
   };
   return (
     <div className="entirePage">
-      <div className="details">
-        <div className="aboutSection">
+      <div className="aboutSection">
+        <div className="content">
           <h1>Lets's Connect</h1>
           <p>
-            <h2>
-              Tired of being alone? Let's connect is your answer. We bring together individuals who are looking into any kind of romantic
-              relationship together. With a click away, you might meet your match made in heaven!
-            </h2>
+            Tired of being alone? Let's connect is your answer. We bring together individuals who are looking for any kind of companionship.
+            With just a click away, you might meet your new favorite person and sway away in love! Love is a fire. But whether it is going
+            to warm your hearth or burn down your house, you can never tell...
           </p>
         </div>
+      </div>
 
-        <div style={containerStyles}>
-          <ImageSlider slides={slides} />
-        </div>
-        {/* <div className="images">
+      <div className="imageSlider" style={containerStyles}>
+        <ImageSlider slides={slides} />
+      </div>
+      {/* <div className="images">
           <Slideshow />
           <img
             src="https://images.unsplash.com/photo-1494403687614-8ca3e13f154f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzZ8fGxvdmV8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60"
@@ -49,8 +48,8 @@ function HomePage() {
             alt=""
           />
         </div> */}
-      </div>
-      <div id="article">
+
+      {/* <div id="article">
         <p>
           <h2>
             <h1>Research has proven</h1>
@@ -69,7 +68,7 @@ function HomePage() {
             <NavLink to="add_details" />
           </h2>
         </p>
-      </div>
+      </div> */}
     </div>
   );
 }
