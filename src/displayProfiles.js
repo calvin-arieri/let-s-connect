@@ -9,6 +9,7 @@ function ProfilesDisplay({current_user2}) {
       .then((data) => setProfiles(data))
       .catch((err) => console.log(err));
   }, []);
+  // eslint-disable-next-line
   const newUserArray = profiles.filter((not_user) =>{
     if(not_user.userName !== current_user2){
       return(not_user)
@@ -17,7 +18,7 @@ function ProfilesDisplay({current_user2}) {
   return (
     <div id="other_profiles">
       <div className="top">
-      <img style={{ maxHeight: '100px', maxWidth: '100px' }} src="https://rb.gy/8oavh" />{" "}
+      <img style={{ maxHeight: '100px', maxWidth: '100px' }} src="https://rb.gy/8oavh" alt="logo" />{" "}
       <h1>Here are the other profiles using the app</h1>
       </div>
       
@@ -32,7 +33,7 @@ function ProfilesDisplay({current_user2}) {
               <p>Location: {profile.location}</p>
               <p>Age: {profile.age}</p>
               <p>Gender: {profile.gender}</p>
-              <p>Social link:<a href={profile.password} target="_blank">social media chat</a> </p>
+              <p>Social link:<a href={profile.password} target="_blank" rel="noreferrer" >social media chat</a> </p>
               <p>email:{profile.email}</p>
               
             </div>

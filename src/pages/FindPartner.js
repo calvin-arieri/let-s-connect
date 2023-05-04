@@ -1,7 +1,6 @@
 import ProfilesDisplay from "../displayProfiles";
 import Suggestion from '../components/Suggestion'
 import { useState,useEffect} from "react";
-import Post from "../components/Posts";
 import UpdateProfile from "../components/UpdateProfile";
 
 function FindPartner() {
@@ -19,6 +18,7 @@ function FindPartner() {
     function receive_userName() {
         setpass_SearchName_(search_userName)
     }
+    // eslint-disable-next-line 
     const current_userDetail = profiles.filter(profile =>{
         if(profile.userName === pass_searchName){
             return(profile)

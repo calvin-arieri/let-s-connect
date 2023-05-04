@@ -1,4 +1,4 @@
-import { useEffect, useState } from "react";
+import { useState } from "react";
 import "./updateProfile.css";
 
 function UpdateProfile({firstName, lastName, id ,picture}) {

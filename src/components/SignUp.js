@@ -25,19 +25,10 @@ function SignUp() {
     setFormState((prevState) => ({ ...prevState, [name]: value }));
   };
 
-  const handleInterestChange = (event) => {
-    const { interest, value } = event.target;
-    setFormState((prevState) => ({ ...prevState, [interest]: value }));
-  };
-
   const handleUserNameChange = (event) => {
     setFormState((prevState) => ({ ...prevState, userName: userNameRef.current.value }));
   };
 
-  const handleTypeChange = (event) => {
-    const { type, value } = event.target;
-    setFormState((prevState) => ({ ...prevState, [type]: value }));
-  };
 
   const handleSubmit = (event) => {
   event.preventDefault();
