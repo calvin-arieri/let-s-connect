@@ -1,68 +1,73 @@
+.App {
+  text-align: center;
+}
+.top {
+  display: flex;
+  justify-content: space-between;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.top img {
+  border-radius: 15px;
+}
 .footer {
-    background-color: pink;
-    padding: 2rem;
-    display: flex;
-    flex-wrap: wrap;
-    justify-content: space-between;
-    align-items: center;
-  }
-  
-  .footer__contact {
-    display: flex;
-    flex-wrap: wrap;
-    align-items: center;
-    gap: 1rem;
-    margin-bottom: 1rem;
-  }
-  
-  .footer__item {
-    display: flex;
-    gap: 0.5rem;
-  }
-  
-  .footer__item span:first-child {
-    font-weight: bold;
-  }
-  
-  .footer__item a {
-    color: inherit;
-  }
-  
-  .footer__copy {
-    margin-bottom: 1rem;
-  }
-  
-  .footer__review {
-    display: flex;
-    flex-direction: column;
-    align-items: center;
-    gap: 1rem;
-    margin-bottom: 1rem;
-  }
-  
-  .footer__form {
-    width: 100%;
-    height: 40%;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-  }
-  
-  .footer__form label {
-    font-weight: bold;
-  }
-  
-  .footer__form textarea {
-    resize: vertical;
-  }
-  
-  .footer__form button {
-    align-self: flex-end;
-  }
-  
-  .footer__reviews {
-    width: 100%;
-    display: flex;
-    flex-direction: column;
-    gap: 0.5rem;
-  }
+  background-color: #fa586a;
+  color: black;
+  padding: 30px;
+  text-align: center;
+}
+.footer__info {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+  margin-bottom: 20px;
+}
+.footer__social-icons a {
+  margin-right: 10px;
+}
+.footer__contact {
+  display: flex;
+  flex-wrap: wrap;
+  justify-content: center;
+}
+.footer__item {
+  margin: 10px;
+}
+.footer__item span {
+  margin-right: 5px;
+  font-weight: bold;
+}
+.footer__review {
+  display: flex;
+  flex-direction: column;
+  align-items: center;
+}
+.footer__form {
+  margin-bottom: 20px;
+  display: flex;
+  flex-direction: column;
+}
+
+.footer__form button {
+  box-shadow: border-box;
+  border-radius: 8px;
+  margin-top: 12px;
+  width: 15%;
+  height: 5%;
+  background-color: black;
+  color: #fa586a;
+}
+.footer__reviews p {
+  margin: 10px 0;
+}
+.footer__link {
+  color: black;
+  font-weight: bold;
+  margin: 0 20px;
+}
+.footer__link:hover {
+  text-decoration: underline;
+}
+.footer__links {
+  padding: 1%;
+}

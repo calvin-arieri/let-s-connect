@@ -1,5 +1,6 @@
-import { useState, useRef } from "react";
-import "./SignUp.css"
+import { useRef, useState } from "react";
+import Footer from "../footer";
+import "./SignUp.css";
 
 function SignUp() {
   const [formState, setFormState] = useState({
@@ -47,16 +48,12 @@ function SignUp() {
         password: formState.password,
       }
 
-      fetch("https://lets-connect-bryn.onrender.com/profiles", {
-        method: "POST",
-        headers: {
-          "Content-Type": "application/json",
-        },
-        body: JSON.stringify(newProfile),
-      })
-        .then((response) => response.json())
-        .then((data) => {
-          console.log(data); // JSON data returned from server
+        fetch("https://lets-connect-bryn.onrender.com/profiles", {
+          method: "POST",
+          headers: {
+            "Content-Type": "application/json",
+          },
+          body: JSON.stringify(newProfile),
         })
     };
 
@@ -65,7 +62,12 @@ function SignUp() {
     <div>
       <div className="container">
         <h3>LET'S CONNECT SIGN UP FORM</h3>
-
+        <form className="form1">
+          <label for="fname">First Name</label>
+          <br />
+          <input placeholder="First Name" type="text" name="fname" value={formState.fname} onChange={handleChange} />
+          <br />
+        </form>
         <form className="FORM1">
           <div className="input-space">
             <input
@@ -120,29 +122,26 @@ function SignUp() {
             <option value="ELDORET">ELDORET</option>
             <option value="MOMBASA">MOMBASA</option>
           </select>
-        </div>
-          <div className="input-space">
-            <input
-              placeholder="Age"
-              type="text"
-              name="age"
-              value={formState.age}
-              onChange={handleChange}
-            />
-          </div>
-          <div className="input-space1">
-            <select name="gender" value={formState.gender} onChange={handleChange}>
-              <option value="">Select Gender</option>
+          <br />
+          <label for="age">Age</label>
+          <br />
+          <input placeholder="Age" type="text" name="age" value={formState.age} onChange={handleChange} />
+          <br />
+          <label for="gender">Gender</label>
+          <br />
+          <select name="gender" value={formState.gender} onChange={handleChange}>
+            <option value="">Select Gender</option>
             <option value="male">Male</option>
             <option value="female">Female</option>
           </select>
-        </div>
-          <div className="input-space1">
-            <select name="Prefgender" value={formState.Prefgender} onChange={handleChange}>
-              <option value="">Select Gender Preference</option>
+          <br />
+          <label for="Prefgender">Prefered Gender</label>
+          <br />
+          <select name="Prefgender" value={formState.Prefgender} onChange={handleChange}>
+            <option value="">Select Gender Preference</option>
             <option value="male">Male</option>
             <option value="female">Female</option>
-              <option value="both">Both</option>
+            <option value="both">Both</option>
           </select>
         </div>
         <div className="input-space1">
@@ -180,14 +179,10 @@ function SignUp() {
       <span className="button__background"></span>
     </button>
         </form>
-
-
       </div>
-      
+      <Footer />
     </div>
-    
   );
-  
 }
 
 export default SignUp;
