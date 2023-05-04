@@ -1,19 +1,14 @@
 import { useEffect, useState } from "react";
 import "./updateProfile.css";
-function UpdateProfile() {
+
+function UpdateProfile({firstName, lastName, id ,picture}) {
   const [profiles, setProfiles] = useState([]);
   const [location, setLocation] = useState(profiles.location);
   const [interest, setInterest] = useState(profiles.interest);
   const [pGender, setPGender] = useState(profiles.pGender);
   const [type, setType] = useState(profiles.type);
 
-  useEffect(() => {
-    fetch("https://lets-connect-bryn.onrender.com/profiles/1")
-      .then((r) => r.json())
-      .then((profile) => setProfiles(profile));
-  }, []);
-
-  console.log(profiles);
+  //console.log(profiles);
 
   function updating(e, id) {
     e.preventDefault();
@@ -22,10 +17,9 @@ function UpdateProfile() {
       interest: interest,
       pGender: pGender,
       type: type,
-      photo: photo,
     };
 
-    console.log(updateProfile);
+    //console.log(updateProfile);
 
     fetch(`https://lets-connect-bryn.onrender.com/profiles/${id}`, {
       method: "PATCH",
@@ -41,11 +35,11 @@ function UpdateProfile() {
   return (
     <div className="updateProfile" id="update_profile">
       <div className="updatePhoto">
-        <img src="//placehold.it/100" className="avatar img-circle" alt="avatar" />
+        <img src={picture} className="avatar img-circle" alt="avatar" />
         <h6>Upload a different photo...</h6>
         <input type="file" className="form-control"></input>
         <br />
-        <button>Update Image</button>
+
       </div> 
 
       <div className="updateInfo">

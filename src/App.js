@@ -3,7 +3,7 @@ import "./App.css";
 import SignUp from "./components/SignUp";
 import FinalHomePage from "./pages/FinalHomePage";
 import FindPartner from "./pages/FindPartner";
-import ProfilesDisplay from "./displayProfiles";
+import NavBar from './pages/NavBar'
 
 
 function App() {
