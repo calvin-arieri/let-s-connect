@@ -1,4 +1,7 @@
 import "./homePage.css";
+import React from "react";
+
+
 function HomePage() {
   return (
     <div className="entirePage">
