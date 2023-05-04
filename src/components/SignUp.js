@@ -97,9 +97,9 @@ function SignUp() {
   return (
     <div>
       <div className="container">
-        <h1 color="black">SIGN UP</h1>
+        <h1>SIGN UP</h1>
 
-        <form>
+        <form className="FORM1">
           <div className="input-space">
             <input
               placeholder="First Name"
@@ -145,7 +145,7 @@ function SignUp() {
               onChange={handleChange}
             />
           </div>
-          <div className="input-space">
+          <div className="input-space1">
             <select name="location" value={formState.location} onChange={handleChange}>
               <option value="">Select location;</option>
             <option value="NAIROBI">NAIROBI</option>
@@ -179,7 +179,7 @@ function SignUp() {
           </select>
         </div>
         <div className="input-space1">
-            <select name="Interest" value={formState.interest} onChange={handleInterestChange}>
+            <select name="interest" value={formState.interest} onChange={handleChange}>
             <option value="" className="SELECT">Select Interest</option>
             <option value="SPORTS">SPORTS</option>
             <option value="COOKING">COOKING</option>
@@ -212,7 +212,7 @@ function SignUp() {
   </div> */}
         
          <div className="input-space1">
-            <select name="Type" value={formState.type} onChange={handleTypeChange}>
+            <select name="type" value={formState.type} onChange={handleChange}>
               <option value="">Choose relationship type:</option>
             <option value="long-term">long-term</option>
             <option value="short-term">short-term</option>

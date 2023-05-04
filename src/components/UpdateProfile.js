@@ -22,6 +22,7 @@ function UpdateProfile() {
       interest: interest,
       pGender: pGender,
       type: type,
+      photo: photo,
     };
 
     console.log(updateProfile);
@@ -45,9 +46,10 @@ function UpdateProfile() {
         <input type="file" className="form-control"></input>
         <br />
         <button>Update Image</button>
-      </div>
+      </div> 
 
       <div className="updateInfo">
+
         <form>
           <select name="location" id="location" value={location} onChange={(e) => setLocation(e.target.value)}>
             <option value="nairobi">NAIROBI</option>

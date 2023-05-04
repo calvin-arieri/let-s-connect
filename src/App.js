@@ -1,8 +1,7 @@
+import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
-import { BrowserRouter,Route,Routes } from "react-router-dom";
-import NavBar from "./pages/NavBar";
-import FinalHomePage from "./pages/FinalHomePage";
 import SignUp from "./components/SignUp";
+import FinalHomePage from "./pages/FinalHomePage";
 import FindPartner from "./pages/FindPartner";
 import ProfilesDisplay from "./displayProfiles";
 
