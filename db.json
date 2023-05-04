@@ -17,7 +17,7 @@
       "password": "************",
       "id": 1
     },
-   { 
+    {
       "fName": "Natasha",
       "lname": "Nderitu",
       "d.O.B": "02-05-2004",
@@ -179,7 +179,7 @@
       "password": "************",
       "id": 9
     },
-    
+
     {
       "fName": "Lynn",
       "lname": "Tande",
@@ -342,7 +342,7 @@
       "password": "************",
       "id": 18
     },
-    
+
     {
       "fName": "Mary",
       "lname": "Smith",
@@ -361,8 +361,7 @@
       "password": "************",
       "id": 19
     },
-   
-    
+
     {
       "fName": "Diana",
       "lname": "Chepchumba",
