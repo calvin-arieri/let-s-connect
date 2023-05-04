@@ -32,7 +32,7 @@ function ProfilesDisplay({current_user2}) {
               <p>Location: {profile.location}</p>
               <p>Age: {profile.age}</p>
               <p>Gender: {profile.gender}</p>
-              <p>Social link:{profile.password}</p>
+              <p>Social link:<a href={profile.password} target="_blank">social media chat</a> </p>
               <p>email:{profile.email}</p>
               
             </div>

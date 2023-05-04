@@ -33,10 +33,9 @@ function FindPartner() {
                     <input type="text" onChange={(event)=>{setSearch_userName(event.target.value)}}/>
                     <button onClick={receive_userName}>submit username</button>
                     <a href="#suggestion">Suggestion</a>
-                    <a href="#other_profiles">Other profiles</a>
-                    <a href="#post">Posts</a>
+                    <a href="#other_profiles">Other profiles</a>                   
                     <a href="#update_profile">Change preference</a>
-                    <a href="">Post</a>
+                    
                 </nav>
             </div>
             {current_userDetail.map(profile_1 => {

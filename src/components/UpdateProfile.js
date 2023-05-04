@@ -10,7 +10,7 @@ function UpdateProfile({firstName, lastName, id ,picture}) {
 
   //console.log(profiles);
 
-  function updating(e, id) {
+  function updating(e) {
     e.preventDefault();
     const updateProfile = {
       location: location,
@@ -18,8 +18,6 @@ function UpdateProfile({firstName, lastName, id ,picture}) {
       pGender: pGender,
       type: type,
     };
-
-    //console.log(updateProfile);
 
     fetch(`https://lets-connect-bryn.onrender.com/profiles/${id}`, {
       method: "PATCH",
@@ -30,6 +28,16 @@ function UpdateProfile({firstName, lastName, id ,picture}) {
     })
       .then((res) => res.json())
       .then((profiles) => setProfiles(profiles));
+  }
+  function handleDelete(event) {
+    let deleted_id = event.target.id
+
+    fetch(`https://lets-connect-bryn.onrender.com/profiles/${deleted_id}`,{
+      method: "DELETE",
+    })
+    .then(r => r.json())
+    .then((data) => console.log(data))
+    alert(`User ${firstName} ${lastName} has been deleted successfully!`)
   }
 
   return (
@@ -79,13 +87,13 @@ function UpdateProfile({firstName, lastName, id ,picture}) {
             <option value="friendship">FRIENDSHIP</option>
           </select>
           <br />
-          <button onClick={(e) => updating(e, 1)}>Save Changes</button>
+          <button onClick={(e) => updating(e)}>Save Changes</button>
           <br />
-          <button>Delete Profile</button>
+          <button id={id} onClick={handleDelete}>Delete Profile</button>
         </form>
       </div>
     </div>
   );
-}
+} 
 
 export default UpdateProfile;
