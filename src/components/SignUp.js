@@ -1,4 +1,5 @@
 import { useState, useRef } from "react";
+import "./SignUp.css"
 
 function SignUp() {
   const [formState, setFormState] = useState({
@@ -97,7 +98,7 @@ function SignUp() {
   return (
     <div>
       <div className="container">
-        <h1>SIGN UP</h1>
+        <h3>LET'S CONNECT SIGN UP FORM</h3>
 
         <form className="FORM1">
           <div className="input-space">
@@ -219,7 +220,12 @@ function SignUp() {
           </select>
         </div>
         
-        <button onClick={handleSubmit}><span>SignUp</span></button>
+        {/* <button onClick={handleSubmit}><span>SignUp</span></button> */}
+         <button className="button1" onClick={handleSubmit}>
+      <span>Sign Up</span>
+      <span className="button__border"></span>
+      <span className="button__background"></span>
+    </button>
         </form>
 
 

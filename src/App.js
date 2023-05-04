@@ -21,7 +21,7 @@ function App() {
     </main>
    </BrowserRouter>   
     {/* <Suggestion maximum_age={30} minimum_age={18} location="NAIROBI" preferred_gender={"female"} interest={"PARTYING"} type_relationship={"long-term"}/>     */}
-  </div>)
+  </div>);
 }
 
 export default App;
