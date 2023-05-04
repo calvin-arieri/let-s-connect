@@ -42,9 +42,9 @@ function FindPartner() {
             {current_userDetail.map(profile_1 => {
                 return(
                     <div key={profile_1.id}>
-                <Suggestion maximum_age={profile_1.maxAge} minimum_age={profile_1.minAge} location={profile_1.location} preferred_gender={profile_1.pGender} interest={profile_1.interest} type_relationship={profile_1.type}/> 
-                <ProfilesDisplay />
-                <Post />
+                <Suggestion maximum_age={profile_1.maxAge} minimum_age={profile_1.minAge} location={profile_1.location} preferred_gender={profile_1.pGender} interest={profile_1.interest} type_relationship={profile_1.type} current_user={profile_1.userName}/> 
+                <ProfilesDisplay current_user2={profile_1.userName}/>
+                <h2 style={{fontSize:"60px"} } >Your Profile</h2>
                 <UpdateProfile firstName={profile_1.fName} lastName={profile_1.lname} picture={profile_1.photo} id={profile_1.id}/>
                 </div>
                 )

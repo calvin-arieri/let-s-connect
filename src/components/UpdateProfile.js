@@ -35,9 +35,9 @@ function UpdateProfile({firstName, lastName, id ,picture}) {
   return (
     <div className="updateProfile" id="update_profile">
       <div className="updatePhoto">
-        <img src={picture} className="avatar img-circle" alt="avatar" />
-        <h6>Upload a different photo...</h6>
-        <input type="file" className="form-control"></input>
+        <img src={picture} className="avatar img-circle" alt={firstName} />
+        <h1>{firstName}</h1>
+        <h2>{lastName}</h2>
         <br />
 
       </div> 

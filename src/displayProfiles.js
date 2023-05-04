@@ -1,6 +1,6 @@
 import { useEffect, useState } from "react";
 
-function ProfilesDisplay() {
+function ProfilesDisplay({current_user2}) {
   const [profiles, setProfiles] = useState([]);
 
   useEffect(() => {
@@ -9,7 +9,11 @@ function ProfilesDisplay() {
       .then((data) => setProfiles(data))
       .catch((err) => console.log(err));
   }, []);
-
+  const newUserArray = profiles.filter((not_user) =>{
+    if(not_user.userName !== current_user2){
+      return(not_user)
+    }
+  })
   return (
     <div id="other_profiles">
       <div className="top">
@@ -18,7 +22,7 @@ function ProfilesDisplay() {
       </div>
       
       <div className="profileCard">
-        {profiles.map((profile) => (
+        {newUserArray.map((profile) => (
           <div key={profile.id} className="card" >
             
             <img src={profile.photo} alt={profile.fName} />
