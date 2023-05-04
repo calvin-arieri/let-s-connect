@@ -28,7 +28,7 @@ function FindPartner() {
     return(
         <div>
             <div className="user">
-                <nav style={{backgroundColor:"#fa586a", height:"35px", position:"fixed", top:"0", width:"100"}}>
+                <nav style={{backgroundColor:"#fa586a", height:"35px", position:"fixed", top:"0", width:"100%"}}>
                     <label style={{
               textDecoration: "none",
               color: "black",
@@ -43,11 +43,11 @@ function FindPartner() {
               textDecoration: "none",
               color: "white",
               fontWeight: "bold",
-              fontSize: "larger",
+              fontSize: "x-large",
               transition: "color 0.3s ease",
               backgroundColor: "transparent",
               border:"transparent",
-              marginRight:"70px",
+              marginRight:"1000px",
             }}
             onMouseOver={(e) => (e.target.style.color = "black")}
             onMouseOut={(e) => (e.target.style.color = "white")}>submit username</button>
@@ -57,24 +57,27 @@ function FindPartner() {
               fontWeight: "bold",
               fontSize: "larger",
               transition: "color 0.3s ease",
+              marginLeft: "20px",
             }}
             onMouseOver={(e) => (e.target.style.color = "black")}
-            onMouseOut={(e) => (e.target.style.color = "white")}href="#suggestion">Suggestion</a>{"   "}
+            onMouseOut={(e) => (e.target.style.color = "white")}href="#suggestion">{"   "}Suggestion {"   "}</a>
                     <a style={{
               textDecoration: "none",
               color: "white",
               fontWeight: "bold",
               fontSize: "larger",
               transition: "color 0.3s ease",
+              marginLeft:"20px"
             }}
             onMouseOver={(e) => (e.target.style.color = "black")}
-            onMouseOut={(e) => (e.target.style.color = "white")}href="#other_profiles">Other profiles</a>                   
+            onMouseOut={(e) => (e.target.style.color = "white")}href="#other_profiles">Otherprofiles</a>                   
                     <a style={{
               textDecoration: "none",
               color: "white",
               fontWeight: "bold",
               fontSize: "larger",
               transition: "color 0.3s ease",
+              marginLeft:"20px"
             }}
             onMouseOver={(e) => (e.target.style.color = "black")}
             onMouseOut={(e) => (e.target.style.color = "white")}href="#update_profile">Change preference</a>
