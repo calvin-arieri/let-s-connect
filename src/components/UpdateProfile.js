@@ -10,6 +10,7 @@ function UpdateProfile() {
   const [interest, setInterest] = useState(profiles.interest);
   const [pGender, setPGender] = useState(profiles.pGender);
   const [type, setType] = useState(profiles.type);
+  const [photo, setPhoto] = useState(profiles.photo);
 
   useEffect(() => {
     fetch("https://lets-connect-bryn.onrender.com/profiles/1")
@@ -30,6 +31,7 @@ function UpdateProfile() {
       interest: interest,
       pGender: pGender,
       type: type,
+      photo: photo,
     };
 
     console.log(updateProfile);
@@ -47,16 +49,22 @@ function UpdateProfile() {
 
   return (
     <div className="updateProfile">
-      <div className="updatePhoto">
+      {/* <div className="updatePhoto">
         <img src="//placehold.it/100" className="avatar img-circle" alt="avatar" />
         <h6>Upload a different photo...</h6>
         <input type="file" className="form-control"></input>
         <br />
         <button>Update Image</button>
-      </div>
+      </div> */}
 
       <div className="updateInfo">
+        {/* <img src="//placehold.it/100" className="avatar img-circle" alt="avatar" />
+        <input type="file" className="form-control"></input> */}
         <form>
+          <label for="photo">Image Link</label>
+          <br />
+          <input type="text" id="photo" name="photo" value={photo} onChange={(e) => setPhoto(e.target.value)} />
+          <br />
           <label for="fName">First Name</label>
           <br />
           <input type="text" id="fName" name="fName" value={fName} onChange={(e) => setFName(e.target.value)} />

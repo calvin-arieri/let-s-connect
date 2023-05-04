@@ -1,26 +1,6 @@
 {
   "profiles": [
     {
-<<<<<<< HEAD
-      "fName": "calvin",
-      "lname": "Arieri",
-      "d.O.B": "02-05-2004",
-      "location": "Nairobi",
-      "interest": "Gaming",
-      "minAge": 18,
-      "maxAge": 25,
-      "photo": "",
-      "userName": "calvin_arieri",
-      "gender": "male",
-      "pGender": "female",
-      "type": "Long-term",
-      "email": "morebucalvin@gmail",
-      "password": "************",
-      "id": 1
-    }
-  ]
-}
-=======
       "fName": "Natasha",
       "lname": "Nderitu",
       "d.O.B": "02-05-2004",
@@ -182,7 +162,7 @@
       "password": "************",
       "id": 9
     },
-    
+
     {
       "fName": "Lynn",
       "lname": "Tande",
@@ -345,7 +325,7 @@
       "password": "************",
       "id": 18
     },
-    
+
     {
       "fName": "Mary",
       "lname": "Smith",
@@ -364,8 +344,7 @@
       "password": "************",
       "id": 19
     },
-   
-    
+
     {
       "fName": "Diana",
       "lname": "Chepchumba",
@@ -386,4 +365,3 @@
     }
   ]
 }
->>>>>>> 4c6bf3eb5b0a0a5425dcba3f195dde41c6fc7638
