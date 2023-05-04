@@ -20,7 +20,7 @@ function Suggestion({maximum_age, minimum_age, location, preferred_gender, inter
     })
 
     return (
-        <div>
+        <div id="suggestion">
           <div className="top">
           <img style={{ maxHeight: '100px', maxWidth: '100px' }} src="https://rb.gy/8oavh" />{" "}
           <h1>These are your matches</h1>
