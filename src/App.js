@@ -19,7 +19,7 @@ function App() {
           <Route path='/' element={<FinalHomePage />} /> 
           <Route path='add_details' element={<SignUp />} />
           <Route path='find_partner' element={<FindPartner />} >
-            <Route exact path='with_id/' element={<UpdateProfile />} />
+            <Route path='with_id/' element={<UpdateProfile />} />
             <Route path= 'no_id'  element={<ProfilesDisplay />} />
           </Route>  
         </Routes>

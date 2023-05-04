@@ -7,8 +7,8 @@ function FindPartner() {
                 Thank you for joining us
             </div>
             <nav>
-                <NavLink to ='with_id'>Non member</NavLink>
-                <NavLink to = 'no_id'>Member</NavLink>
+                <NavLink to ='find_partner/with_id'>Non member</NavLink>
+                <NavLink to = 'find_partner/no_id'>Member</NavLink>
             </nav>
         </div>
     )
