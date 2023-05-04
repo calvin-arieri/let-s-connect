@@ -4,14 +4,14 @@ function ProfilesDisplay() {
   const [profiles, setProfiles] = useState([]);
 
   useEffect(() => {
-    fetch("http://localhost:3000/profiles")
+    fetch("https://lets-connect-bryn.onrender.com/profiles")
       .then((res) => res.json())
       .then((data) => setProfiles(data))
       .catch((err) => console.log(err));
   }, []);
 
   return (
-    <div>
+    <div id="other_profiles">
       <div className="top">
       <img style={{ maxHeight: '100px', maxWidth: '100px' }} src="https://rb.gy/8oavh" />{" "}
       <h1>Here are the other profiles using the app</h1>

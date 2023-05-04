@@ -40,7 +40,7 @@ function Post() {
     }
     //console.log(available_posts)
     return(
-        <div id="post_container">
+        <div className="post_container" id="post">
             {filtered_output.map((one_post) =>{
                 const {media, userName, caption, dislike, likes, id ,comment} = one_post
                 return(
