@@ -28,7 +28,7 @@ function FindPartner() {
     return(
         <div>
             <div className="user">
-                <nav style={{backgroundColor:"#fa586a", height:"35px", position:"fixed", top:"0.5", width:"100%"}}>
+                <nav style={{backgroundColor:"#fa586a", height:"35px", position:"fixed", top:"0", width:"100%"}}>
                     <label style={{
               textDecoration: "none",
               color: "black",
