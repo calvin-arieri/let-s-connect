@@ -1,4 +1,42 @@
-.FORM1 {
+.container {
+  display: flex;
+  flex-direction: column;
+  width: 100vw;
+  height: 100vh;
+}
+
+.form1 input {
+  width: 35%;
+  height: 30px;
+  box-shadow: border-box;
+  border-radius: 8px;
+  border-color: #fa586a;
+}
+
+.form1 select {
+  width: 35%;
+  height: 34px;
+  box-shadow: border-box;
+  border-radius: 8px;
+  border-color: #fa586a;
+}
+
+.form1 label {
+  font-size: 20px;
+  font-style: italic;
+  font-weight: 500;
+}
+
+.signUp {
+  box-shadow: border-box;
+  border-radius: 8px;
+  margin-top: 12px;
+  width: 15%;
+  height: 5%;
+  background-color: black;
+  color: #fa586a;
+}
+/* .FORM1 {
     height: 1800px;
     width: 100%;
 }
@@ -51,7 +89,7 @@ select {
     border-radius: 10px;
     box-sizing: border-box;
     font-size: 20px;
-}
+} */
 /* 
 button {
     display: inline-block;
@@ -92,7 +130,7 @@ button span:after {
     opacity: 1;
     right: 0;
 } */
-
+/* 
 .button1 {
     display: inline-block;
     position: relative;
@@ -127,7 +165,7 @@ button span:after {
     left: -100%;
     width: 200%;
     height: 200%;
-    /* background-color: #fff; */
+    background-color: #fff;
     transform: rotate(90deg);
     transition: all 0.2s ease;
 }
@@ -170,4 +208,4 @@ h3{
 option{
 
     border-radius: 0%;
-}
+} */
