@@ -1,0 +1,68 @@
+.footer {
+    background-color: pink;
+    padding: 2rem;
+    display: flex;
+    flex-wrap: wrap;
+    justify-content: space-between;
+    align-items: center;
+  }
+  
+  .footer__contact {
+    display: flex;
+    flex-wrap: wrap;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .footer__item {
+    display: flex;
+    gap: 0.5rem;
+  }
+  
+  .footer__item span:first-child {
+    font-weight: bold;
+  }
+  
+  .footer__item a {
+    color: inherit;
+  }
+  
+  .footer__copy {
+    margin-bottom: 1rem;
+  }
+  
+  .footer__review {
+    display: flex;
+    flex-direction: column;
+    align-items: center;
+    gap: 1rem;
+    margin-bottom: 1rem;
+  }
+  
+  .footer__form {
+    width: 100%;
+    height: 40%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }
+  
+  .footer__form label {
+    font-weight: bold;
+  }
+  
+  .footer__form textarea {
+    resize: vertical;
+  }
+  
+  .footer__form button {
+    align-self: flex-end;
+  }
+  
+  .footer__reviews {
+    width: 100%;
+    display: flex;
+    flex-direction: column;
+    gap: 0.5rem;
+  }

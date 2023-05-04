@@ -1,29 +1,89 @@
+/* Page styles */
 .entirePage {
-  background-color: rgb(206, 88, 128);
-  height: 100vh;
-  width: 100vw;
+  background-image: url('https://images.unsplash.com/photo-1494403687614-8ca3e13f154f?ixlib=rb-4.0.3&ixid=MnwxMjA3fDB8MHxzZWFyY2h8MzZ8fGxvdmV8ZW58MHx8MHx8&auto=format&fit=crop&w=500&q=60');
+  background-size: cover;
+  background-position: center;
+  position: relative;
 }
 
+/* Background opacity transition */
+.entirePage::before {
+  content: '';
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
+  height: 100%;
+  color: #000;
+}
+
+/* Reduce background opacity on hover */
+.entirePage:hover::before {
+  opacity: 0.8;
+}
+
+/* Sign in section */
 .signin {
   height: 5%;
   display: flex;
   justify-content: end;
 }
 
+/* Main content section */
 .details {
-  height: 50%;
+  height: 40%;
   display: flex;
+  color: rgb(89, 7, 7);
+  position: relative;
+  z-index: 1;
 }
 
-.aboutSection {
-  width: 50%;
-}
-
+/* Image section */
 .images {
-  width: 50%;
+  position: absolute;
+  top: 0;
+  left: 0;
+  width: 100%;
+  height: 100%;
+  opacity: 1;
+  transition: opacity 0.5s ease-in-out;
 }
 
+/* Reduce image opacity on hover */
+.images:hover {
+  opacity: 0.8;
+}
+
+/* About section */
+.aboutSection {
+  padding: 50px;
+  color: wheat;
+  z-index: 1;
+}
+
+/* Image styles */
 img {
-  width: 80%;
-  height: 100%;
+  width: 10cm;
+  height: 10cm;
+  border-radius: 30px 30px 30px 30px;
+}
+
+/* Article section */
+#article {
+  width: 60%;
+  margin-left: 4%;
+  color: rgb(89, 7, 7);
+}
+
+/* Heading styles */
+h1 {
+  color: wheat;
+  font-size: 20px;
+}
+
+h2 {
+  color: wheat;
+  font-size: 20px;
 }
