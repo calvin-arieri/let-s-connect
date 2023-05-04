@@ -47,7 +47,7 @@ function FindPartner() {
               transition: "color 0.3s ease",
               backgroundColor: "transparent",
               border:"transparent",
-              marginRight:"1000px",
+              marginRight:"700px",
             }}
             onMouseOver={(e) => (e.target.style.color = "black")}
             onMouseOut={(e) => (e.target.style.color = "white")}>submit username</button>
