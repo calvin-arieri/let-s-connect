@@ -1,3 +1,4 @@
+import MoreInfo from "./MoreInfo";
 import "./homePage.css";
 import ImageSlider from "./slideshow";
 
@@ -25,20 +26,23 @@ function HomePage() {
   };
   return (
     <div className="entirePage">
-      <div className="aboutSection">
-        <div className="content">
-          <h1>Lets's Connect</h1>
-          <p>
-            Tired of being alone? Let's connect is your answer. We bring together individuals who are looking for any kind of companionship.
-            With just a click away, you might meet your new favorite person and sway away in love! Love is a fire. But whether it is going
-            to warm your hearth or burn down your house, you can never tell...
-          </p>
+      <div className="entireAbout">
+        <div className="aboutSection">
+          <div className="content">
+            <h1>Let's Connect</h1>
+            <p>
+              Tired of being alone? Let's connect is your answer. We bring together individuals who are looking for any kind of
+              companionship. With just a click away, you might meet your new favorite person and sway away in love! Love is a fire. But
+              whether it is going to warm your hearth or burn down your house, you can never tell...
+            </p>
+          </div>
+        </div>
+
+        <div className="imageSlider" style={containerStyles}>
+          <ImageSlider slides={slides} />
         </div>
       </div>
 
-      <div className="imageSlider" style={containerStyles}>
-        <ImageSlider slides={slides} />
-      </div>
       {/* <div className="images">
           <Slideshow />
           <img
@@ -69,6 +73,8 @@ function HomePage() {
           </h2>
         </p>
       </div> */}
+
+      <MoreInfo />
     </div>
   );
 }

@@ -1,7 +1,11 @@
 .entirePage {
-  background-color: black;
   display: flex;
-  color: aliceblue;
+  flex-direction: column;
+}
+.entireAbout {
+  background-color: rgba(0, 0, 0, 0.958);
+  display: flex;
+  color: black;
   height: 100vh;
   width: 100vw;
 }
@@ -15,10 +19,10 @@
 }
 
 .content {
-  background-color: #e91a4def;
+  background-color: black;
   width: 80%;
   height: 40%;
-  color: #1c1d24;
+  color: #939ba7;
   /* text-align: center; */
   /* justify-content: center; */
   /* align-items: center; */
@@ -26,6 +30,10 @@
   font-style: oblique;
   box-sizing: border-box;
   border-radius: 12px;
+}
+
+.content h1 {
+  color: #e9ebee;
 }
 
 .content:hover {
