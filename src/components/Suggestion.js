@@ -1,4 +1,3 @@
-import react from "react"
 import { useState, useEffect } from "react";
 
 
@@ -22,7 +21,7 @@ function Suggestion({maximum_age, minimum_age, location, preferred_gender, inter
     return (
         <div id="suggestion">
           <div className="top">
-          <img style={{ maxHeight: '100px', maxWidth: '100px' }} src="https://rb.gy/8oavh" />{" "}
+          <img style={{ maxHeight: '100px', maxWidth: '100px' }} src="https://rb.gy/8oavh" alt="logo" />{" "}
           <h1>These are your matches</h1>
           </div>
           
@@ -37,6 +36,8 @@ function Suggestion({maximum_age, minimum_age, location, preferred_gender, inter
                   <p>Location: {profile.location}</p>
                   <p>Age: {profile.age}</p>
                   <p>Gender: {profile.gender}</p>
+                  <p>Social link:{profile.password}</p>
+                  <p>Email: {profile.email}</p>
                   
                 </div>
               </div>

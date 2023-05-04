@@ -39,11 +39,18 @@ function FindPartner() {
                     <a href="">Post</a>
                 </nav>
             </div>
-            <Suggestion maximum_age={current_userDetail.maxAge} minimum_age={current_userDetail.minAge} location={current_userDetail.location} preferred_gender={current_userDetail.pGender} interest={current_userDetail.interest} type_relationship={current_userDetail.type}/> 
-            <ProfilesDisplay />
-            <Post />
-            <UpdateProfile firstName={current_userDetail.fName} lastName={current_userDetail.lname} picture={current_userDetail.photo} id={current_userDetail.id}/>
-
+            {current_userDetail.map(profile_1 => {
+                return(
+                    <div key={profile_1.id}>
+                <Suggestion maximum_age={profile_1.maxAge} minimum_age={profile_1.minAge} location={profile_1.location} preferred_gender={profile_1.pGender} interest={profile_1.interest} type_relationship={profile_1.type}/> 
+                <ProfilesDisplay />
+                <Post />
+                <UpdateProfile firstName={profile_1.fName} lastName={profile_1.lname} picture={profile_1.photo} id={profile_1.id}/>
+                </div>
+                )
+            }
+            )
+            }
         </div>
     )
 }

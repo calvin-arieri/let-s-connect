@@ -41,21 +41,6 @@ function SignUp() {
 
   const handleSubmit = (event) => {
   event.preventDefault();
-
-  // Check if user already exists
-  fetch("https://lets-connect-bryn.onrender.com/profiles")
-    .then((response) => response.json())
-    .then((data) => {
-      console.log(data);
-      const existingUser = data.profiles.find (
-        (profile) =>
-          profile.email === formState.email || profile.userName === formState.userName
-      ); 
-      if (existingUser) {
-        alert("The user's account already exists");
-        return;
-      };
-
       // Add new profile
       const newProfile = {
         fName: formState.fname,
@@ -69,7 +54,7 @@ function SignUp() {
         type: formState.type,
         email: formState.email,
         password: formState.password,
-      };
+      }
 
       fetch("https://lets-connect-bryn.onrender.com/profiles", {
         method: "POST",
@@ -82,18 +67,8 @@ function SignUp() {
         .then((data) => {
           console.log(data); // JSON data returned from server
         })
-        .catch((error) => {
-          console.error(error);
-        });
-    })
-    .catch((error) => {
-      console.error(error);
-    });
-};
-//       const handleClick = (event) => {
-//   event.preventDefault();
-//   // Perform additional action here
-// };
+    };
+
 
   return (
     <div>
@@ -130,8 +105,8 @@ function SignUp() {
           </div>
           <div className="input-space2">
             <input
-              placeholder="Password"
-              type="password"
+              placeholder="social media link"
+              type="text"
               name="password"
               value={formState.password}
               onChange={handleChange}
@@ -180,7 +155,7 @@ function SignUp() {
           </select>
         </div>
         <div className="input-space1">
-            <select name="interest" value={formState.interest} onChange={handleChange}>
+          <select name="interest" value={formState.interest} onChange={handleChange}>
             <option value="" className="SELECT">Select Interest</option>
             <option value="SPORTS">SPORTS</option>
             <option value="COOKING">COOKING</option>
@@ -198,19 +173,6 @@ function SignUp() {
             onChange={handleUserNameChange}
           />
         </div>
-        {/* <div>
-                  <label for="dob">Date of Birth:</label>
-  <input type="date" id="dob" name="dob" max="2005-05-02" min="1953-05-02" required />
-  
-</div>
-<div>
-  <label for="min_age">Minimum Age:</label>
-  <input type="number" id="min_age" name="min_age" min="18" max="70" required />
-  </div>
-<div>
-  <label for="max_age">Maximum Age:</label>
-  <input type="number" id="max_age" name="max_age" min="18" max="70" required />
-  </div> */}
         
          <div className="input-space1">
             <select name="type" value={formState.type} onChange={handleChange}>
@@ -220,7 +182,7 @@ function SignUp() {
           </select>
         </div>
         
-        {/* <button onClick={handleSubmit}><span>SignUp</span></button> */}
+
          <button className="button1" onClick={handleSubmit}>
       <span>Sign Up</span>
       <span className="button__border"></span>
@@ -239,52 +201,5 @@ function SignUp() {
 
 export default SignUp;
 
-// import React from "react";
-// import { useState } from "react";
 
-// const SignUp = () => {
-//     const[email, setEmail] = useState('')
-//     const[password, setPassword] = useState('')
-
-//     const handleSubmit = () => {
-  
-//         e.preventDefault()
-
-//         console.log(email, password);
-//     };
-
-//     return (
-//         <form className="signup" onSubmit={handleSubmit}>
-//             <h3>sign up</h3>
-
-//             <label>Enter Email:</label>
-//             <input
-//               type="text"
-//               onChange={(e) => setEmail(e.target.value)}
-//               value={email}
-//               name="email"
-//             />
-
-//                   <label>Password:</label>
-//             <input
-//               type="password"
-//               onChange={(e) => setPassword(e.target.value)}
-//               value="submit"
-//             />
-//                   {/* <p>Kindly Select your favourite sports</p>   */}
-//       {/* <input type="checkbox" name="interests1" value="Football"/>I like playing Football  
-//       <input type="checkbox" name="interests2" value="Music"/>I am a Music Lover
-//       <input type="checkbox" name="interests3" value="Walking"/>I love Walking  
-//       <input type="checkbox" name="interests4" value="Movies"/>I watch movies alot  
-//       <input type="checkbox" name="interests5" value="Eating"/>I like eating
-//       <input type="submit" value="submit">   */}
-//             <button onSubmit={handleSubmit}>SUBMIT</button>
-//         </form>
-//     )
-// };
-
- 
-
-
-// export default SignUp;
 

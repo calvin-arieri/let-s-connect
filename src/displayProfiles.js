@@ -28,6 +28,8 @@ function ProfilesDisplay() {
               <p>Location: {profile.location}</p>
               <p>Age: {profile.age}</p>
               <p>Gender: {profile.gender}</p>
+              <p>Social link:{profile.password}</p>
+              <p>email:{profile.email}</p>
               
             </div>
           </div>
