@@ -17,23 +17,22 @@ function ProfilesDisplay({current_user2}) {
   })
   return (
     <div id="other_profiles">
-      <div className="top">
-      <img style={{ maxHeight: '100px', maxWidth: '100px' }} src="https://rb.gy/8oavh" alt="logo" />{" "}
-      <h1>Here are the other profiles using the app</h1>
+      <div className="top1">
+           <h1>Here are the other profiles using the app</h1>
       </div>
       
       <div className="profileCard">
         {newUserArray.map((profile) => (
           <div key={profile.id} className="card" >
             
-            <img src={profile.photo} alt={profile.fName} />
+            <img src={profile.photo} alt={profile.fName} className="image_card" />
            
             <div className="card-content">
             <h3>{profile.fName}</h3>
               <p>Location: {profile.location}</p>
               <p>Age: {profile.age}</p>
               <p>Gender: {profile.gender}</p>
-              <p>Social link:<a href={profile.password} target="_blank" rel="noreferrer" >social media chat</a> </p>
+              <p>Social link:<a href={profile.password} target="_blank" rel="noreferrer">social media chat</a> </p>
               <p>email:{profile.email}</p>
               
             </div>

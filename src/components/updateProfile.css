@@ -1,7 +1,8 @@
 .updateProfile1 {
   display: flex;
   height: 100vh;
-  width: 100vw;
+  width: 80%;
+  margin-left: 20%;
   /* margin: 50px; */
 }
 
@@ -30,8 +31,19 @@
   border-radius: 2px;
   border-color: black;
 }
-select {
-  width: 60%;
+.updateInfo select {
+  width: 30%;
   border-radius: 2px;
   border-color: black;
+  background-color: transparent;
+  border-top: transparent;
+  border-left: transparent;
+  border-right: transparent;
+  margin-top: 4%;
+  font-family: Arial, Helvetica, sans-serif;
+}
+.updateInfo button{
+  background-color: rgb(202, 202, 202);
+  margin-top: 2%;
+  border: transparent;
 }

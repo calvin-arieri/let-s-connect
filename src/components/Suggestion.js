@@ -20,13 +20,13 @@ function Suggestion({maximum_age, minimum_age, location, preferred_gender, inter
 
     return (
         <div id="suggestion">
-          <div className="top">
-          <img style={{ maxHeight: '100px', maxWidth: '100px' }} src="https://rb.gy/8oavh" alt="logo" />{" "}
+          <div className="top1">         
           <h1>These are your matches</h1>
           </div>
           
           <div className="profileCard">
             {SuggestedProfiles.map((profile) => (
+              
               <div key={profile.id} className="card" >
                 
                 <img src={profile.photo} alt={profile.fName} />

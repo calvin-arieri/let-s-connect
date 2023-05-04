@@ -66,3 +66,18 @@ li.active {
 .NAV1 a.active {
   background-color: #087e8b;
 } */
+.card {
+  width:20% ;
+  box-shadow: 3px 3px 3px 3px;
+  margin-left: 40%;
+}
+.card:hover{
+  box-shadow: 7px 7px 7px 7px;
+  font-size: larger;
+}
+.image_card{
+  width: 95%;
+  height:400px ;
+  margin-top: 2%;
+  border-radius: 7px;
+}
