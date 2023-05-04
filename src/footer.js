@@ -13,14 +13,26 @@ function Footer() {
 
   return (
     <footer className="footer">
-      <div className="footer__links">
-        <a href="/">Home</a>
-        <a href="/about">About Us</a>
-        <a href="/contact">Developer Contacts</a>
-        <a href="mailto:customer-service@letsconnect.com">Email</a>
-        <a href="/customer-service">Customer Service</a>
-        <a href="/report">Report</a>
-      </div>
+<div className="footer__links" style={{ display: "grid", gridTemplateColumns: "repeat(3, 1fr)", gap: "10px" }}>
+  <div className="linkcolumns">
+    <a href="/" style={{ textDecoration: "none", color: "white", fontWeight: "bold", fontSize: "larger" }}>Home</a>
+  </div>
+  <div className="linkcolumns">
+    <a href="/about" style={{ textDecoration: "none", color: "white", fontWeight: "bold", fontSize: "larger" }}>About Us</a>
+  </div>
+  <div className="linkcolumns">
+    <a href="/contact" style={{ textDecoration: "none", color: "white", fontWeight: "bold", fontSize: "larger" }}>Developer Contacts</a>
+  </div>
+  <div className="linkcolumns">
+    <a href="mailto:customer-service@letsconnect.com" style={{ textDecoration: "none", color: "white", fontWeight: "bold", fontSize: "larger" }}>Email</a>
+  </div>
+  <div className="linkcolumns">
+    <a href="/customer-service" style={{ textDecoration: "none", color: "white", fontWeight: "bold", fontSize: "larger" }}>Customer Service</a>
+  </div>
+  <div className="linkcolumns">
+    <a href="/report" style={{ textDecoration: "none", color: "white", fontWeight: "bold", fontSize: "larger" }}>Report</a>
+  </div>
+</div>
       <div className="footer__info">
         <div className="footer__social-icons">
           <a href="https://www.instagram.com/">
