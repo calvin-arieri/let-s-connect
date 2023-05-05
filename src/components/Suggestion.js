@@ -13,7 +13,7 @@ function Suggestion({maximum_age, minimum_age, location, preferred_gender, inter
     // eslint-disable-next-line
     const SuggestedProfiles = profiles.filter((profile_filter) => {
 //console.log(typeof Number(profile_filter.age))
-        if(minimum_age>=Number(profile_filter.age) && maximum_age<= Number(profile_filter.age) && location === profile_filter.location && preferred_gender === profile_filter.pGender && interest === profile_filter.interest && type_relationship === profile_filter.type && current_user !== profile_filter.userName){
+        if(minimum_age>=Number(profile_filter.age) , maximum_age<= Number(profile_filter.age) , location === profile_filter.location && preferred_gender === profile_filter.pGender && interest === profile_filter.interest && type_relationship === profile_filter.type ){
             return(profile_filter)
         }        
     })
@@ -29,7 +29,7 @@ function Suggestion({maximum_age, minimum_age, location, preferred_gender, inter
               
               <div key={profile.id} className="card" >
                 
-                <img src={profile.photo} alt={profile.fName} />
+                <img src={profile.photo} alt={profile.fName} className="image_card" />
                
                 <div className="card-content">
                 <h3>{profile.fName}</h3>

@@ -26,34 +26,16 @@ function SignUp() {
     setFormState((prevState) => ({ ...prevState, [name]: value }));
   };
 
-  const handleInterestChange = (event) => {
-    const { interest, value } = event.target;
-    setFormState((prevState) => ({ ...prevState, [interest]: value }));
-  };
+  
 
   const handleUserNameChange = (event) => {
     setFormState((prevState) => ({ ...prevState, userName: userNameRef.current.value }));
   };
 
-  const handleTypeChange = (event) => {
-    const { type, value } = event.target;
-    setFormState((prevState) => ({ ...prevState, [type]: value }));
-  };
+
 
   const handleSubmit = (event) => {
     event.preventDefault();
-
-    // Check if user already exists
-    fetch("https://lets-connect-bryn.onrender.com/profiles")
-      .then((response) => response.json())
-      .then((data) => {
-        console.log(data);
-        const existingUser = data.profiles.find((profile) => profile.email === formState.email || profile.userName === formState.userName);
-        if (existingUser) {
-          alert("The user's account already exists");
-          return;
-        }
-
         // Add new profile
         const newProfile = {
           fName: formState.fname,
@@ -77,21 +59,10 @@ function SignUp() {
           body: JSON.stringify(newProfile),
         })
           .then((response) => response.json())
-          .then((data) => {
-            console.log(data); // JSON data returned from server
-          })
-          .catch((error) => {
-            console.error(error);
-          });
-      })
-      .catch((error) => {
-        console.error(error);
-      });
+          .then((data) => console.log(data)); // JSON data returned from server
+
   };
-  //       const handleClick = (event) => {
-  //   event.preventDefault();
-  //   // Perform additional action here
-  // };
+
 
   return (
     <div>
