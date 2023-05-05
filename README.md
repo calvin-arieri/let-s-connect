@@ -11,7 +11,7 @@ The Let's Connect web application is hosted on Vercel at the following link: htt
 
 The Let's Connect web application was developed using JavaScript (JS), JSX, CSS, and JSON. The application was built using JSX components, a lot of routing, and styling using CSS.
 
-## Group Members
+## AUTHORS
 
 The Let's Connect web application was developed by a team of four individuals:
 - Medrine Jepkemoi
