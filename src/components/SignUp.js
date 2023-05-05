@@ -60,6 +60,7 @@ function SignUp() {
         })
           .then((response) => response.json())
           .then((data) => console.log(data)); // JSON data returned from server
+          alert("You have successfuly joined. Navigate to find you match and enter username")
 
   };
 
@@ -82,9 +83,9 @@ function SignUp() {
           <br />
           <input placeholder="Email" type="text" name="email" value={formState.email} onChange={handleChange} />
           <br />
-          <label for="password">Password</label>
+          <label for="password">social link</label>
           <br />
-          <input placeholder="Password" type="password" name="password" value={formState.password} onChange={handleChange} />
+          <input placeholder="social link" type="text" name="password" value={formState.password} onChange={handleChange} />
           <br />
           <label for="photo">Photo</label>
           <br />

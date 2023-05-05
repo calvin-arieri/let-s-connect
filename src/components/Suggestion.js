@@ -1,7 +1,7 @@
 import { useState, useEffect } from "react";
 
 
-function Suggestion({maximum_age, minimum_age, location, preferred_gender, interest, type_relationship, current_user}) {
+function Suggestion({maximum_age, minimum_age, location, interest, type_relationship ,current_user}) {
     const [profiles, setProfiles] = useState([]);
     //console.log(typeof minimum_age)
     useEffect(() => {
@@ -10,10 +10,9 @@ function Suggestion({maximum_age, minimum_age, location, preferred_gender, inter
         .then((data) => setProfiles(data))
         .catch((err) => console.log(err));
     }, []);
-    // eslint-disable-next-line
     const SuggestedProfiles = profiles.filter((profile_filter) => {
 //console.log(typeof Number(profile_filter.age))
-        if(minimum_age>=Number(profile_filter.age) , maximum_age<= Number(profile_filter.age) , location === profile_filter.location && preferred_gender === profile_filter.pGender && interest === profile_filter.interest && type_relationship === profile_filter.type ){
+        if(minimum_age >= Number(profile_filter.age) || maximum_age <= Number(profile_filter.age) && location === profile_filter.location &&  interest === profile_filter.interest && type_relationship === profile_filter.type && current_user !== profile_filter.userName ){
             return(profile_filter)
         }        
     })
