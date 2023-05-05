@@ -26,27 +26,48 @@ function SignUp() {
     setFormState((prevState) => ({ ...prevState, [name]: value }));
   };
 
+  const handleInterestChange = (event) => {
+    const { interest, value } = event.target;
+    setFormState((prevState) => ({ ...prevState, [interest]: value }));
+  };
+
   const handleUserNameChange = (event) => {
     setFormState((prevState) => ({ ...prevState, userName: userNameRef.current.value }));
   };
 
+  const handleTypeChange = (event) => {
+    const { type, value } = event.target;
+    setFormState((prevState) => ({ ...prevState, [type]: value }));
+  };
 
   const handleSubmit = (event) => {
-  event.preventDefault();
-      // Add new profile
-      const newProfile = {
-        fName: formState.fname,
-        lname: formState.lname,
-        age: formState.age,
-        location: formState.location,
-        interest: formState.interest,
-        photo: formState.photo,
-        userName: formState.userName,
-        gender: formState.gender,
-        type: formState.type,
-        email: formState.email,
-        password: formState.password,
-      }
+    event.preventDefault();
+
+    // Check if user already exists
+    fetch("https://lets-connect-bryn.onrender.com/profiles")
+      .then((response) => response.json())
+      .then((data) => {
+        console.log(data);
+        const existingUser = data.profiles.find((profile) => profile.email === formState.email || profile.userName === formState.userName);
+        if (existingUser) {
+          alert("The user's account already exists");
+          return;
+        }
+
+        // Add new profile
+        const newProfile = {
+          fName: formState.fname,
+          lname: formState.lname,
+          age: formState.age,
+          location: formState.location,
+          interest: formState.interest,
+          photo: formState.photo,
+          userName: formState.userName,
+          gender: formState.gender,
+          type: formState.type,
+          email: formState.email,
+          password: formState.password,
+        };
 
         fetch("https://lets-connect-bryn.onrender.com/profiles", {
           method: "POST",
@@ -55,8 +76,22 @@ function SignUp() {
           },
           body: JSON.stringify(newProfile),
         })
-    };
-
+          .then((response) => response.json())
+          .then((data) => {
+            console.log(data); // JSON data returned from server
+          })
+          .catch((error) => {
+            console.error(error);
+          });
+      })
+      .catch((error) => {
+        console.error(error);
+      });
+  };
+  //       const handleClick = (event) => {
+  //   event.preventDefault();
+  //   // Perform additional action here
+  // };
 
   return (
     <div>
@@ -67,56 +102,27 @@ function SignUp() {
           <br />
           <input placeholder="First Name" type="text" name="fname" value={formState.fname} onChange={handleChange} />
           <br />
-        </form>
-        <form className="FORM1">
-          <div className="input-space">
-            <input
-              placeholder="First Name"
-              type="text"
-              name="fname"
-              value={formState.fname}
-              onChange={handleChange}
-            />
-          </div>
-          <div className="input-space">
-            <input
-              placeholder="Last Name"
-              type="text"
-              name="lname"
-              value={formState.lname}
-              onChange={handleChange}
-            />
-          </div>
-          <div className="input-space">
-            <input
-              placeholder="Email"
-              type="text"
-              name="email"
-              value={formState.email}
-              onChange={handleChange}
-            />
-          </div>
-          <div className="input-space2">
-            <input
-              placeholder="social media link"
-              type="text"
-              name="password"
-              value={formState.password}
-              onChange={handleChange}
-            />
-          </div>
-          <div className="input-space">
-            <input
-              placeholder="Photo"
-              type="text"
-              name="photo"
-              value={formState.photo}
-              onChange={handleChange}
-            />
-          </div>
-          <div className="input-space1">
-            <select name="location" value={formState.location} onChange={handleChange}>
-              <option value="">Select location;</option>
+
+          <label for="lname">Last Name</label>
+          <br />
+          <input placeholder="Last Name" type="text" name="lname" value={formState.lname} onChange={handleChange} />
+          <br />
+          <label for="email">Email</label>
+          <br />
+          <input placeholder="Email" type="text" name="email" value={formState.email} onChange={handleChange} />
+          <br />
+          <label for="password">Password</label>
+          <br />
+          <input placeholder="Password" type="password" name="password" value={formState.password} onChange={handleChange} />
+          <br />
+          <label for="photo">Photo</label>
+          <br />
+          <input placeholder="Photo" type="text" name="photo" value={formState.photo} onChange={handleChange} />
+          <br />
+          <label for="location">Location</label>
+          <br />
+          <select name="location" value={formState.location} onChange={handleChange}>
+            <option value="">Select location;</option>
             <option value="NAIROBI">NAIROBI</option>
             <option value="KISUMU">KISUMU</option>
             <option value="ELDORET">ELDORET</option>
@@ -143,10 +149,14 @@ function SignUp() {
             <option value="female">Female</option>
             <option value="both">Both</option>
           </select>
-        </div>
-        <div className="input-space1">
+          <br />
+          <label for="interest">Interests</label>
+          <br />
+
           <select name="interest" value={formState.interest} onChange={handleChange}>
-            <option value="" className="SELECT">Select Interest</option>
+            <option value="" className="SELECT">
+              Select Interest
+            </option>
             <option value="SPORTS">SPORTS</option>
             <option value="COOKING">COOKING</option>
             <option value="READING">READING</option>
@@ -154,30 +164,27 @@ function SignUp() {
             <option value="GAMING">GAMING</option>
             <option value="PARTYING">PARTYING</option>
           </select>
-        </div>
-        <div className="input-space">
-          <input
-            placeholder="Username"
-            type="text"
-            ref={userNameRef}
-            onChange={handleUserNameChange}
-          />
-        </div>
-        
-         <div className="input-space1">
-            <select name="type" value={formState.type} onChange={handleChange}>
-              <option value="">Choose relationship type:</option>
+          <br />
+          <label for="userName">Username</label>
+          <br />
+          <input placeholder="Username" name="userName" type="text" ref={userNameRef} onChange={handleUserNameChange} />
+          <br />
+          <label for="type">Type</label>
+          <br />
+          <select name="type" value={formState.type} onChange={handleChange}>
+            <option value="">Choose relationship type:</option>
             <option value="long-term">long-term</option>
             <option value="short-term">short-term</option>
           </select>
-        </div>
-        
 
-         <button className="button1" onClick={handleSubmit}>
-      <span>Sign Up</span>
-      <span className="button__border"></span>
-      <span className="button__background"></span>
-    </button>
+          <br />
+
+          {/* <button onClick={handleSubmit}><span>SignUp</span></button> */}
+          <button className="signUp" onClick={handleSubmit}>
+            <span>Sign Up</span>
+            <span className="button__border"></span>
+            <span className="button__background"></span>
+          </button>
         </form>
       </div>
       <Footer />
@@ -186,6 +193,3 @@ function SignUp() {
 }
 
 export default SignUp;
-
-
-
