@@ -1,70 +1,34 @@
-# Getting Started with Create React App
+## Project Name: Let's Connect
 
-This project was bootstrapped with [Create React App](https://github.com/facebook/create-react-app).
+LET'S CONNECT is a social interaction web application developed as part of the Moringa School phase 2 project. The application is designed to increase social interaction among users and help them easily find like-minded people with whom they can have the desired type of relationship, whether friendship, long-term or short-term. 
 
-## Available Scripts
+## Technologies Used
 
-In the project directory, you can run:
+The Let's Connect web application was developed using JavaScript (JS), JSX, CSS, and JSON. The application was built using JSX components, a lot of routing, and styling using CSS.
 
-### `npm start`
+## Group Members
 
-Runs the app in the development mode.\
-Open [http://localhost:3000](http://localhost:3000) to view it in your browser.
+The Let's Connect web application was developed by a team of four individuals:
+- Medrine Jepkemoi
+- Morgan Jason
+- Calvin Arieri
+- Bethwel Kipruto
 
-The page will reload when you make changes.\
-You may also see any lint errors in the console.
+## Contact Information
 
-### `npm test`
+To contact any of the team members, please use the following email addresses:
+- Morgan Jason: 420morganjason@gmail.com
+- Bethwel Kipruto: bethwelk85@gmail.com
+- Calvin Arieri: morebucalvin@gmail.com
 
-Launches the test runner in the interactive watch mode.\
-See the section about [running tests](https://facebook.github.io/create-react-app/docs/running-tests) for more information.
+## How to Use
 
-### `npm run build`
+The Let's Connect web application allows users to sign up for an account. Once signed up, users can log in to their set apart profile and find more users based on their preferences. The application's user interface is designed to be intuitive and user-friendly, with easy-to-use navigation and search functionality.
 
-Builds the app for production to the `build` folder.\
-It correctly bundles React in production mode and optimizes the build for the best performance.
+## Link
 
-The build is minified and the filenames include the hashes.\
-Your app is ready to be deployed!
+The Let's Connect web application is hosted on Vercel at the following link: https://let-s-connect.vercel.app/
 
-See the section about [deployment](https://facebook.github.io/create-react-app/docs/deployment) for more information.
+## Contribution Guidelines
 
-### `npm run eject`
-
-**Note: this is a one-way operation. Once you `eject`, you can't go back!**
-
-If you aren't satisfied with the build tool and configuration choices, you can `eject` at any time. This command will remove the single build dependency from your project.
-
-Instead, it will copy all the configuration files and the transitive dependencies (webpack, Babel, ESLint, etc) right into your project so you have full control over them. All of the commands except `eject` will still work, but they will point to the copied scripts so you can tweak them. At this point you're on your own.
-
-You don't have to ever use `eject`. The curated feature set is suitable for small and middle deployments, and you shouldn't feel obligated to use this feature. However we understand that this tool wouldn't be useful if you couldn't customize it when you are ready for it.
-
-## Learn More
-
-You can learn more in the [Create React App documentation](https://facebook.github.io/create-react-app/docs/getting-started).
-
-To learn React, check out the [React documentation](https://reactjs.org/).
-
-### Code Splitting
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/code-splitting](https://facebook.github.io/create-react-app/docs/code-splitting)
-
-### Analyzing the Bundle Size
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size](https://facebook.github.io/create-react-app/docs/analyzing-the-bundle-size)
-
-### Making a Progressive Web App
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app](https://facebook.github.io/create-react-app/docs/making-a-progressive-web-app)
-
-### Advanced Configuration
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/advanced-configuration](https://facebook.github.io/create-react-app/docs/advanced-configuration)
-
-### Deployment
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/deployment](https://facebook.github.io/create-react-app/docs/deployment)
-
-### `npm run build` fails to minify
-
-This section has moved here: [https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify](https://facebook.github.io/create-react-app/docs/troubleshooting#npm-run-build-fails-to-minify)
+We welcome contributions to the Let's Connect web application. If you would like to contribute, please fork the repository and submit a pull request with your changes. Please make sure to follow the project's coding standards and guidelines.
