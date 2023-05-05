@@ -50,7 +50,7 @@ function FindPartner() {
               marginRight:"700px",
             }}
             onMouseOver={(e) => (e.target.style.color = "black")}
-            onMouseOut={(e) => (e.target.style.color = "white")}>submit username</button>
+            onMouseOut={(e) => (e.target.style.color = "white")}>Log in</button>
                     <a style={{
               textDecoration: "none",
               color: "white",
