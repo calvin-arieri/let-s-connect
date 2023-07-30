@@ -23,7 +23,7 @@ function Suggestion({maximum_age, minimum_age, location, interest, type_relation
           <h1>These are your matches</h1>
           </div>
           
-          <div className="profileCard">
+          <div className="card_container2">
             {SuggestedProfiles.map((profile) => (
               
               <div key={profile.id} className="card" >
