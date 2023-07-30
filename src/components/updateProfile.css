@@ -44,3 +44,14 @@ form label{
     font-weight: 100;   
     color: rgb(205, 15, 176);
 }
+@media only screen and (max-width: 600px) {
+    .updateProfile1{
+        display: flex;
+        flex-direction: column;
+        justify-content: center;
+        gap: 7em;
+        border: 1px black solid;
+        width: 50em;  
+        margin-bottom: 2em;  
+    }
+  }
