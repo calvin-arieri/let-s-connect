@@ -50,34 +50,31 @@ li.active {
   color: #fa586a;
   text-decoration: none;
 }
-
-/* .NAV1 a {
-  text-decoration: none;
-  font-size: 50px;
-  border: 2px solid transparent;
-  color: rgb(63, 6, 6);
-  margin-right: 4%;
-}
-
-.NAV1 a:hover {
-  border-color: rgb(120, 8, 27);
-  background-color: rgb(176, 141, 147);
-}
-.NAV1 a.active {
-  background-color: #087e8b;
-} */
-.card {
-  width:20% ;
-  box-shadow: 3px 3px 3px 3px;
-  margin-left: 40%;
+.card{
+  width: 20em;
+  box-shadow: 1px 1px 12px#bf2436;
+  border-radius: 10px;
+  height: fit-content;
 }
 .card:hover{
-  box-shadow: 7px 7px 7px 7px;
-  font-size: larger;
+  width: 21em;
+  box-shadow: 1px 1px 15px#bf2436;
+  border-radius: 10px;
+  height: fit-content;
+  background-color: bisque;
 }
 .image_card{
-  width: 95%;
-  height:400px ;
-  margin-top: 2%;
-  border-radius: 7px;
+  width: 16em;
+  padding-top: 2em; 
+  border-radius: 25px 25px 25px 25px;
+}
+
+.card_container2{
+  display: flex;
+  flex-direction: row;
+  justify-content: center;
+  flex-wrap: wrap;
+  column-gap: 6em;
+  row-gap: 4em;
+  align-content: space-around;
 }

@@ -21,7 +21,7 @@ function ProfilesDisplay({current_user2}) {
            <h1>Here are the other profiles using the app</h1>
       </div>
       
-      <div className="profileCard">
+      <div className="card_container2">
         {newUserArray.map((profile) => (
           <div key={profile.id} className="card" >
             
@@ -33,8 +33,7 @@ function ProfilesDisplay({current_user2}) {
               <p>Age: {profile.age}</p>
               <p>Gender: {profile.gender}</p>
               <p>Social link:<a href={profile.password} target="_blank" rel="noreferrer">social media chat</a> </p>
-              <p>email:{profile.email}</p>
-              
+              <p>email:{profile.email}</p>              
             </div>
           </div>
         ))}
