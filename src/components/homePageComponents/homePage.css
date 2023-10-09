@@ -1,0 +1,33 @@
+@import url('https://fonts.googleapis.com/css2?family=Dancing+Script:wght@600&display=swap');
+@import url('https://fonts.googleapis.com/css2?family=DM+Serif+Display&family=Dancing+Script:wght@500&display=swap');
+.top-bar{
+    font-family: 'Dancing Script', cursive;
+    font-size: 3em;
+    padding-left: 0.6em;
+}
+.welcome-section{
+    display:flex;
+    justify-content: space-evenly;
+    height: 30em;
+    padding-left: 3%;
+    font-family: 'DM Serif Display', serif;
+}
+.welcome-section div{
+    width: 80%;    
+    /* background-color: blanchedalmond; */
+    margin-left: 1em;
+}
+.welcome-section div p{
+    font-size: 1.4em;
+    text-align: center;
+    padding-top: 3em;
+}
+ .welcome-section div:nth-child(2){
+    display: flex;
+    justify-content: center;    
+ }
+
+ .welcome-section a{
+    text-decoration: none;
+    box-shadow: black solid;
+ }

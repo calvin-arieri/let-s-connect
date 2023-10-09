@@ -159,7 +159,6 @@ function SignUp() {
           </button>
         </form>
       </div>
-      <Footer />
     </div>
   );
 }
