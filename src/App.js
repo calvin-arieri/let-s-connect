@@ -1,6 +1,6 @@
 import { BrowserRouter, Route, Routes } from "react-router-dom";
 import "./App.css";
-import SignUp from "./components/SignUp";
+import SignUp from "./components/SignupAndUpdate/SignUp";
 import FinalHomePage from "./pages/FinalHomePage";
 import FindPartner from "./pages/FindPartner";
 import NavBar from "./pages/NavBar";

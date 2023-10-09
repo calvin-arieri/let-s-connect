@@ -1,7 +1,7 @@
 import ProfilesDisplay from "../displayProfiles";
-import Suggestion from '../components/Suggestion'
+import Suggestion from '../components/profileDisplayComponents/Suggestion'
 import { useState,useEffect} from "react";
-import UpdateProfile from "../components/UpdateProfile";
+import UpdateProfile from "../components/SignupAndUpdate/UpdateProfile";
 
 function FindPartner() {
     const [profiles, setProfiles] = useState([]);
