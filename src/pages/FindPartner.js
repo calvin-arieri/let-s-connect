@@ -1,4 +1,4 @@
-import ProfilesDisplay from "../displayProfiles";
+import ProfilesDisplay from "../components/profileDisplayComponents/displayProfiles";
 import Suggestion from '../components/profileDisplayComponents/Suggestion'
 import { useState,useEffect} from "react";
 import UpdateProfile from "../components/SignupAndUpdate/UpdateProfile";

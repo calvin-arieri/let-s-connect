@@ -1,5 +1,5 @@
 import { useRef, useState } from "react";
-import Footer from "../../footer";
+import Footer from "../footerComponent/footer";
 import "./SignUp.css";
 
 function SignUp() {

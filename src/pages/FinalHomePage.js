@@ -1,6 +1,6 @@
 import React from "react";
 import HomePage from "../components/homePageComponents/HomePage";
-import Footer from "../footer";
+import Footer from "../components/footerComponent/footer";
 
 
 function FinalHomePage() {
