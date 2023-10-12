@@ -30,4 +30,11 @@
  .welcome-section a{
     text-decoration: none;
     box-shadow: black solid;
+    font-size: 1.7em;
+ }
+ .welcome-section a:hover{
+    text-decoration: none;
+    box-shadow: black solid;
+    font-size: 1.7em;
+    color: rgb(51, 165, 165);
  }

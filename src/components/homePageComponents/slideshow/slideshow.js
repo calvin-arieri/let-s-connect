@@ -1,9 +1,9 @@
 import { useState } from "react";
 
 const slideStyles = {
-  width: "100%",
-  height: "100%",
-  borderRadius: "12px",
+  width: "80%",
+  height: "90%",
+  borderRadius: "12px" ,
   backgroundSize: "cover",
   backgroundPosition: "center",
 };
@@ -12,9 +12,9 @@ const rightArrowStyles = {
   position: "absolute",
   top: "50%",
   transform: "translate(0, -50%)",
-  right: "32px",
+  right: "70px",
   fontSize: "45px",
-  color: "#fff",
+  color: "white",
   zIndex: 1,
   cursor: "pointer",
 };
